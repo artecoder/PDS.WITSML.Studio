@@ -1,0 +1,1340 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDS.WITSMLstudio.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:PDS.WITSMLstudio.Framework.ConfiguredCatalog">
+            <summary>
+            A catalog that is filtered based on a configuration file.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ConfiguredCatalog.#ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.ConfiguredCatalog" /> class.
+            </summary>
+            <param name="catalog">The catalog.</param>
+            <param name="configurationFilePath">The configuration file path.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ConfiguredCatalog.Configuration">
+            <summary>
+            Gets the composition container configuration.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.ContainerConfig">
+            <summary>
+            Encapsulates the composition container configuration settings.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerConfig.ExcludedAssemblies">
+            <summary>
+            Gets or sets the list of excluded assemblies.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerConfig.ExcludedTypes">
+            <summary>
+            Gets or sets the list of types to exclude from the included assemblies.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerConfig.IncludedTypes">
+            <summary>
+            Gets or sets the list of types to include from the excluded assemblies.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerConfig.DisabledCapabilities">
+            <summary>
+            Gets or sets the disabled capabilities.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerConfig.Verify">
+            <summary>
+            Verifies initialization of included / excluded collections.
+            </summary>
+            <returns>The current instance.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.CapabilityConfig">
+            <summary>
+            Encapsulates the capability configuration settings.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.CapabilityConfig.Functions">
+            <summary>
+            Gets or sets the functions.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.CapabilityConfig.ObjectTypes">
+            <summary>
+            Gets or sets the object types.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.ContainerException">
+            <summary>
+            Represents errors that occur during dependency resolution.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.ContainerException"/> class.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.ContainerException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.ContainerException"/> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.ContainerException"/> class.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Container">
+            <summary>
+            Provides access to the composition container used for dependency injection.
+            </summary>
+            <seealso cref="T:PDS.WITSMLstudio.Framework.IContainer" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.#ctor(System.ComponentModel.Composition.Hosting.CompositionContainer,PDS.WITSMLstudio.Framework.ContainerConfig)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Container"/> class.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="configuration">The container configuration.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Container.Configuration">
+            <summary>
+            Gets the composition container configuration.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.BuildUp(System.Object)">
+            <summary>
+            Satisfies all registered dependencies for the specified object instance.
+            </summary>
+            <param name="instance">The object instance.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.Register``1(``0,System.String)">
+            <summary>
+            Registers the specified instance for dependency injection.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="instance">The object instance.</param>
+            <param name="contractName">The contract name.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.Resolve``1(System.String)">
+            <summary>
+            Resolves a single instance of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+            <exception cref="T:PDS.WITSMLstudio.Framework.ContainerException">Error resolving contract type or contract name</exception>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.Resolve(System.Type,System.String)">
+            <summary>
+            Resolves a single instance of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.ResolveAll``1(System.String)">
+            <summary>
+            Resolves all instances of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>A collection of object instances with all dependencies resolved.</returns>
+            <exception cref="T:PDS.WITSMLstudio.Framework.ContainerException">Error resolving contract type or contract name</exception>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.ResolveAll(System.Type,System.String)">
+            <summary>
+            Resolves all instances of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>A collection of object instances with all dependencies resolved.</returns>
+            <exception cref="T:PDS.WITSMLstudio.Framework.ContainerException">Error resolving contract type or contract name</exception>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.TryResolve``1(System.String)">
+            <summary>
+            Tries to resolve a single instance of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.TryResolve(System.Type,System.String)">
+            <summary>
+            Tries to resolve a single instance of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Container.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.ContainerFactory">
+            <summary>
+            Provides methods to create an instance of the composition container.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerFactory.ConfigurationPath">
+            <summary>
+            Gets or sets the configuration path.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.ContainerFactory.ContainerConfigurationFileName">
+            <summary>
+            Gets or sets the name of the container configuration file.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerFactory.Create(System.String)">
+            <summary>
+            Creates a composition container using the specified assembly path.
+            </summary>
+            <param name="assemblyPath">The assembly path.</param>
+            <returns>The composition container instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.ContainerFactory.Create(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.String)">
+            <summary>
+            Creates a composition container using the specified catalog.
+            </summary>
+            <param name="catalog">The catalog.</param>
+            <param name="assemblyPath">The assembly path.</param>
+            <returns>A composition container instance.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.DateTimeExtensions">
+            <summary>
+            Provides static helper methods that can be used when working with the
+            <see cref="T:System.DateTime"/> and <see cref="T:System.DateTimeOffset"/> types.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.FromUnixTimeMicroseconds(System.Int64,System.Nullable{System.TimeSpan})">
+            <summary>
+            Converts a Unix time expressed as the number of microseconds that have elapsed
+            since 1970-01-01T00:00:00Z to a <see cref="T:System.DateTimeOffset"/> value.
+            </summary>
+            <param name="microseconds">The microseconds.</param>
+            <param name="offset">The offset.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToUnixTimeMicroseconds(System.DateTimeOffset)">
+            <summary>
+            Returns the number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.
+            </summary>
+            <param name="dateTimeOffset">The date time offset.</param>
+            <returns>The number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToUnixTimeMicroseconds(System.Nullable{System.DateTimeOffset})">
+            <summary>
+            Returns the number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.
+            </summary>
+            <param name="dateTimeOffset">The date time offset.</param>
+            <returns>The number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToUnixTimeMicroseconds(System.DateTime)">
+            <summary>
+            Returns the number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.
+            </summary>
+            <param name="dateTime">The date time offset.</param>
+            <returns>The number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToUnixTimeMicroseconds(System.Nullable{System.DateTime})">
+            <summary>
+            Returns the number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.
+            </summary>
+            <param name="dateTime">The date time offset.</param>
+            <returns>The number of microseconds that have elapsed since 1970-01-01T00:00:00.000Z.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToOffsetTime(System.DateTimeOffset,System.Nullable{System.TimeSpan})">
+            <summary>
+            Applies a time zone offset to the current <see cref="T:System.DateTimeOffset"/> instance.
+            </summary>
+            <param name="value">The date time value.</param>
+            <param name="offset">The offset time span.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance, or null.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToUnixTicks(System.Int64)">
+            <summary>
+            Converts microseconds to ticks.
+            </summary>
+            <param name="microseconds">The microseconds.</param>
+            <returns>The value converted to ticks.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.FromUnixTicks(System.Int64)">
+            <summary>
+            Converts ticks to microseconds.
+            </summary>
+            <param name="ticks">The ticks.</param>
+            <returns>The value converted to microseconds.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToTimeZone(System.TimeSpan)">
+            <summary>
+            Converts a TimeSpan to a WITSML TimeZone string.
+            </summary>
+            <param name="offset">The Date Time offset.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToDisplayDateTime(System.Nullable{Energistics.DataAccess.Timestamp},System.TimeSpan)">
+            <summary>
+            To convert a specified timestamp to a specified timespan offset and format 
+            the date time for display as a string that includes fractional seconds without a timezone.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <param name="toOffset">The time span offset to convert the timestamp to.</param>
+            <returns>A string representation of the Timestamp if it is not null, otherwise an empty string.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.ToDisplayDateTime(Energistics.DataAccess.Timestamp,System.TimeSpan)">
+            <summary>
+            To convert a specified timestamp to a specified timespan offset and format 
+            the date time for display as a string that includes fractional seconds without a timezone.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <param name="toOffset">The time span offset to convert the timestamp to.</param>
+            <returns>A string representation of the Timestamp if it is not null, otherwise an empty string.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToHours(System.DateTime)">
+            <summary>
+            Returns a new <see cref="T:System.DateTime"/> instance based on this one where the value is truncated to the hour.
+            </summary>
+            <param name="dateTime">The <see cref="T:System.DateTime"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTime"/> instance with the value truncated to the hour.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToMinutes(System.DateTime)">
+            <summary>
+            Returns a new <see cref="T:System.DateTime"/> instance based on this one where the value is truncated to the minute.
+            </summary>
+            <param name="dateTime">The <see cref="T:System.DateTime"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTime"/> instance with the value truncated to the minute.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToSeconds(System.DateTime)">
+            <summary>
+            Returns a new <see cref="T:System.DateTime"/> instance based on this one where the value is truncated to the second.
+            </summary>
+            <param name="dateTime">The <see cref="T:System.DateTime"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTime"/> instance with the value truncated to the second.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToMilliseconds(System.DateTime)">
+            <summary>
+            Returns a new <see cref="T:System.DateTime"/> instance based on this one where the value is truncated to the millisecond.
+            </summary>
+            <param name="dateTime">The <see cref="T:System.DateTime"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTime"/> instance with the value truncated to the millisecond.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToHours(System.DateTimeOffset)">
+            <summary>
+            Returns a new <see cref="T:System.DateTimeOffset"/> instance based on this one where the value is truncated to the hour.
+            </summary>
+            <param name="DateTimeOffset">The <see cref="T:System.DateTimeOffset"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance with the value truncated to the hour.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToMinutes(System.DateTimeOffset)">
+            <summary>
+            Returns a new <see cref="T:System.DateTimeOffset"/> instance based on this one where the value is truncated to the minute.
+            </summary>
+            <param name="DateTimeOffset">The <see cref="T:System.DateTimeOffset"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance with the value truncated to the minute.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToSeconds(System.DateTimeOffset)">
+            <summary>
+            Returns a new <see cref="T:System.DateTimeOffset"/> instance based on this one where the value is truncated to the second.
+            </summary>
+            <param name="DateTimeOffset">The <see cref="T:System.DateTimeOffset"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance with the value truncated to the second.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.DateTimeExtensions.TruncateToMilliseconds(System.DateTimeOffset)">
+            <summary>
+            Returns a new <see cref="T:System.DateTimeOffset"/> instance based on this one where the value is truncated to the millisecond.
+            </summary>
+            <param name="DateTimeOffset">The <see cref="T:System.DateTimeOffset"/> instance's to return a truncated version of.</param>
+            <returns>A <see cref="T:System.DateTimeOffset"/> instance with the value truncated to the millisecond.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Enum`1">
+            <summary>
+            Generic helper class for ParseEnum method.
+            </summary>
+            <typeparam name="T">The enumeration type.</typeparam>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/> class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/> class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.#ctor(System.Enum)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/> class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Enum`1.StringValue">
+            <summary>
+            Gets or sets the string value.
+            </summary>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Enum`1.EnumValue">
+            <summary>
+            Gets or sets the enum value.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.Parse(System.String,System.Boolean)">
+            <summary>
+            Parses the specified enumeration value.
+            </summary>
+            <param name="enumValue">The enum value.</param>
+            <param name="ignoreCase">if set to <c>true</c> comparison is case insensitive.</param>
+            <returns>The parsed enumeration value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.op_Explicit(System.String)~PDS.WITSMLstudio.Framework.Enum{`0}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.String"/> to <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.op_Explicit(PDS.WITSMLstudio.Framework.Enum{`0})~System.String">
+            <summary>
+            Performs an explicit conversion from <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/> to <see cref="T:System.String"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.op_Explicit(`0)~PDS.WITSMLstudio.Framework.Enum{`0}">
+            <summary>
+            Performs an explicit conversion from <typeparamref name="T"/> to <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.op_Explicit(System.Enum)~PDS.WITSMLstudio.Framework.Enum{`0}">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Enum"/> to <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Enum`1.op_Explicit(PDS.WITSMLstudio.Framework.Enum{`0})~`0">
+            <summary>
+            Performs an explicit conversion from <see cref="T:PDS.WITSMLstudio.Framework.Enum`1"/> to <typeparamref name="T"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.FrameworkExtensions">
+            <summary>
+            Provides custom extension methods for .NET framework types.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetAssemblyVersion(System.Type,System.Int32)">
+            <summary>
+            Gets the version for the <see cref="T:System.Reflection.Assembly"/> containing the specified <see cref="T:System.Type"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="fieldCount">The field count.</param>
+            <returns>The version number string.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.NotNull(System.Object,System.String)">
+            <summary>
+            Throws an exception if the input parameter is null.
+            </summary>
+            <param name="parameter">The parameter to check.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="parameter"/> is null.</exception>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Split``1(System.String,System.String)">
+            <summary>
+            Splits the string to an array.
+            </summary>
+            <typeparam name="T">The object type.</typeparam>
+            <param name="value">The string value.</param>
+            <param name="separator">The separator.</param>
+            <returns>An array of values if successful, otherwise an empty array.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.SplitAndTrim(System.String,System.String)">
+            <summary>
+            Creates an array of trimmed strings by splitting this string at each occurence of a separator.
+            </summary>
+            <param name="value">The string value.</param>
+            <param name="separator">The separator.</param>
+            <returns>A string array.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.SplitQuotedString(System.String,System.String)">
+            <summary>
+            Splits the quoted string value based on the specified separator.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="separator">The separator.</param>
+            <returns>A string array.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.JoinQuotedStrings(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Joins an enumerable of strings that may contain quotes based with the specified separator in between.
+            </summary>
+            <param name="values">The values.</param>
+            <param name="separator">The separator.</param>
+            <returns>The string value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.TrimTrailingZeros(System.String)">
+            <summary>
+            Trims leading and training white space and any trailing zeros after a decimal.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ContainsIgnoreCase(System.String,System.String)">
+            <summary>
+            Determines whether the string contains the specified value, ignoring case.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="value">The value.</param>
+            <returns><c>true</c> if the string contains the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ContainsIgnoreCase(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Determines whether the collection contains the specified value, ignoring case.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="value">The value.</param>
+            <returns><c>true</c> if the collection contains the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.EqualsIgnoreCase(System.String,System.String)">
+            <summary>
+            Determines whether two specified strings have the same value, ignoring case.
+            </summary>
+            <param name="a">The first string to compare, or null.</param>
+            <param name="b">The second string to compare, or null.</param>
+            <returns>
+            true if the value of a is the same as the value of b; otherwise, false.
+            If both a and b are null, the method returns true.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.IsMatch(System.String,System.String)">
+            <summary>
+            Determines whether the string matches the specified pattern
+            </summary>
+            <param name="value">The value.</param>
+            <param name="pattern">The pattern.</param>
+            <returns>
+              <c>true</c> if the specified pattern is match; otherwise, <c>false</c>.
+            Empty or null pattern will always match
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToCamelCase(System.String)">
+            <summary>
+            Converts the specified string to camel case.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The camel case string value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToPascalCase(System.String)">
+            <summary>
+            Converts the specified string to pascal case.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The pascal case string value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToUniqueName(System.String,System.String[])">
+            <summary>
+            Generates a unique name based on the collection of existing names.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="existingNames">The existing names.</param>
+            <returns>name</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.NextOrDefault``1(System.Collections.Generic.IList{``0},``0)">
+            <summary>
+            Next or default.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="collection">The collection.</param>
+            <param name="item">The item.</param>
+            <returns>NextOrDefault</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ForEach``1(System.Collections.Generic.IList{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Any``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Returns whether a collection contains any values.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Any``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Any``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.All``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.All``1(System.Collections.Generic.IList{``0},System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            Performs the specified action on each item in the collection.
+            </summary>
+            <typeparam name="T">The item type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="action">The action to perform on each item in the collection.</param>
+            <returns>The source collection, for chaining.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Skip``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Skip``1(System.Collections.Generic.IList{``0},System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Skip``1(``0[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="values"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Contains(System.String,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="instance"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToDictionaryIgnoreCase``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String})">
+            <summary>
+            Creates a dictionary from collection without duplicates.
+            </summary>
+            <typeparam name="T">The type</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="keySelector">The key selector.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToDictionaryIgnoreCase``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.Func{``0,``1})">
+            <summary>
+             Creates a dictionary from collection without duplicates.
+            </summary>
+            <typeparam name="T">The collection type.</typeparam>
+            <typeparam name="TValue">The dictionary value type.</typeparam>
+            <param name="collection">The collection.</param>
+            <param name="keySelector">The key selector.</param>
+            <param name="elementSelector">The element selector.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            Gets the property value from the specified object instance.
+            </summary>
+            <param name="instance">The object instance.</param>
+            <param name="propertyPath">The property path.</param>
+            <returns>The property value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetPropertyValue``1(System.Object,System.String)">
+            <summary>
+            Gets the property value from the specified object instance.
+            </summary>
+            <typeparam name="T">The value type.</typeparam>
+            <param name="instance">The object instance.</param>
+            <param name="propertyPath">The property path.</param>
+            <returns>The property value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetAttribute``1(System.Enum)">
+            <summary>
+            Gets the custom attribute defined for the specified enumeration member.
+            </summary>
+            <typeparam name="TAttribute">The type of the attribute.</typeparam>
+            <param name="value">The enumeration value.</param>
+            <returns>The defined attribute, or null.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetDescription(System.Enum)">
+            <summary>
+            Gets the description for the specified enumeration member.
+            </summary>
+            <param name="value">The enumeration value.</param>
+            <returns>
+            The description from the <see cref="T:System.ComponentModel.DescriptionAttribute"/> when available;
+            otherwise, the value's ToString() representation.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetName(System.Enum)">
+            <summary>
+            Gets the name for the specified enumeration member.
+            </summary>
+            <param name="value">The enumeration value.</param>
+            <returns>
+            The name from the <see cref="T:System.Xml.Serialization.XmlEnumAttribute"/> when available;
+            otherwise, the value's ToString() representation.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ParseEnum(System.Type,System.String,System.Boolean)">
+            <summary>
+            Parses the enum.
+            </summary>
+            <param name="enumType">Type of the enum.</param>
+            <param name="enumValue">The enum value.</param>
+            <param name="ignoreCase">if set to <c>true</c> comparison is case insensitive.</param>
+            <returns>The parsed enumeration value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.TryParseEnum(System.Type,System.String,System.Boolean,System.Object@)">
+            <summary>
+            Tries to parses the enum value.
+            </summary>
+            <param name="enumType">Type of the enum.</param>
+            <param name="enumValue">The input enum value.</param>
+            <param name="ignoreCase">if set to <c>true</c> comparison is case insensitive.</param>
+            <param name="enumMember">The output enum value.</param>
+            <returns>Whether parsing succeeded.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.IsNumeric(System.Type)">
+            <summary>
+            Determines whether the specified type is numeric.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>true if the type is numeric; otherwise, false</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Encrypt(System.String,System.String,System.Boolean)">
+            <summary>
+            Encrypts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="key">The encryption key.</param>
+            <param name="forLocalMachine">if set to <c>true</c> encrypt for local machine.</param>
+            <returns>The encrypted value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Decrypt(System.String,System.String,System.Boolean)">
+            <summary>
+            Decrypts the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="key">The encryption key.</param>
+            <param name="forLocalMachine">if set to <c>true</c> decrypt for local machine.</param>
+            <returns>The decrypted value.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.ToSecureString(System.String)">
+            <summary>
+            Creates a new <see cref="T:System.Security.SecureString"/> from the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A <see cref="T:System.Security.SecureString"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.GetBaseException``1(System.Exception)">
+            <summary>
+            Gets the base exception of the specified type.
+            </summary>
+            <typeparam name="T">The exception type.</typeparam>
+            <param name="ex">The exception.</param>
+            <returns>An exception of the specified type, or null.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.FrameworkExtensions.Partition``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Takes an incoming IEnumerable of T and splits it into "chunks" specified by size with the last partition containing whatever was left over
+            </summary>
+            <param name="sequence">the original enumerable to split up</param>
+            <param name="size">the size of each partition</param>
+            <typeparam name="T">generic type for enumerable</typeparam>
+            <returns>an enumerable of enumerable chunks sized to match the size parameter, in original order</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.IContainer">
+            <summary>
+            Defines methods that can be used to manage dependencies between objects.
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.IContainer.Configuration">
+            <summary>
+            Gets the composition container configuration.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.BuildUp(System.Object)">
+            <summary>
+            Satisfies all registered dependencies for the specified object instance.
+            </summary>
+            <param name="instance">The object instance.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.Register``1(``0,System.String)">
+            <summary>
+            Registers the specified instance for dependency injection.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="instance">The object instance.</param>
+            <param name="contractName">The contract name.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.Resolve``1(System.String)">
+            <summary>
+            Resolves a single instance of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.Resolve(System.Type,System.String)">
+            <summary>
+            Resolves a single instance of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.ResolveAll``1(System.String)">
+            <summary>
+            Resolves all instances of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>A collection of object instances with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.ResolveAll(System.Type,System.String)">
+            <summary>
+            Resolves all instances of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>A collection of object instances with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.TryResolve``1(System.String)">
+            <summary>
+            Tries to resolve a single instance of the specified type and optional contract name.
+            </summary>
+            <typeparam name="T">The contract type.</typeparam>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.IContainer.TryResolve(System.Type,System.String)">
+            <summary>
+            Tries to resolve a single instance of the specified type and optional contract name.
+            </summary>
+            <param name="type">The contract type.</param>
+            <param name="contractName">The contract name.</param>
+            <returns>The object instance with all dependencies resolved.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Log4NetExtensions">
+            <summary>
+            Extensions for log4net to expose the following additional log message severity levels:
+            NOTICE, TRACE, and VERBOSE.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.IsNoticeEnabled(log4net.ILog)">
+            <summary>
+            Checks if this logger is enabled for the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <returns><c>true</c> if <c>NOTICE</c> is enabled; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Notice(log4net.ILog,System.Object)">
+            <summary>
+            Logs a message object with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Notice(log4net.ILog,System.Object,System.Exception)">
+            <summary>
+            Logs a message object with the <c>NOTICE</c> level
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.NoticeFormat(log4net.ILog,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.NoticeFormat(log4net.ILog,System.String,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.NoticeFormat(log4net.ILog,System.String,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.NoticeFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+            <param name="arg2">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.NoticeFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>NOTICE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="provider">An <see cref="T:System.IFormatProvider"/> that supplies culture-specific formatting information</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.IsTraceEnabled(log4net.ILog)">
+            <summary>
+            Checks if this logger is enabled for the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <returns><c>true</c> if <c>TRACE</c> is enabled; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Trace(log4net.ILog,System.Object)">
+            <summary>
+            Logs a message object with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Trace(log4net.ILog,System.Object,System.Exception)">
+            <summary>
+            Logs a message object with the <c>TRACE</c> level
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.TraceFormat(log4net.ILog,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.TraceFormat(log4net.ILog,System.String,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.TraceFormat(log4net.ILog,System.String,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.TraceFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+            <param name="arg2">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.TraceFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>TRACE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="provider">An <see cref="T:System.IFormatProvider"/> that supplies culture-specific formatting information</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.IsVerboseEnabled(log4net.ILog)">
+            <summary>
+            Checks if this logger is enabled for the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <returns><c>true</c> if <c>VERBOSE</c> is enabled; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Verbose(log4net.ILog,System.Object)">
+            <summary>
+            Logs a message object with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.Verbose(log4net.ILog,System.Object,System.Exception)">
+            <summary>
+            Logs a message object with the <c>VERBOSE</c> level
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="message">The message object to log.</param>
+            <param name="exception">The exception to log, including its stack trace.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.VerboseFormat(log4net.ILog,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.VerboseFormat(log4net.ILog,System.String,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.VerboseFormat(log4net.ILog,System.String,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.VerboseFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            Logs a formatted message string with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="arg0">An Object to format</param>
+            <param name="arg1">An Object to format</param>
+            <param name="arg2">An Object to format</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Log4NetExtensions.VerboseFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message string with the <c>VERBOSE</c> level.
+            </summary>
+            <param name="logger">The logger</param>
+            <param name="provider">An <see cref="T:System.IFormatProvider"/> that supplies culture-specific formatting information</param>
+            <param name="format">A String containing zero or more format items</param>
+            <param name="args">An Object array containing zero or more objects to format</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Range`1">
+            <summary>
+            Represents the start and end values of a range.
+            </summary>
+            <typeparam name="T">The data type.</typeparam>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Range`1.#ctor(`0,`0,System.Nullable{System.TimeSpan})">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Range`1" /> struct.
+            </summary>
+            <param name="start">The start value.</param>
+            <param name="end">The end value.</param>
+            <param name="offset">The offset.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Range`1.Start">
+            <summary>
+            Gets the start of the range.
+            </summary>
+            <value>The start value.</value>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Range`1.End">
+            <summary>
+            Gets the end of the range.
+            </summary>
+            <value>The end value.</value>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Range`1.Offset">
+            <summary>
+            Gets the offset.
+            </summary>
+            <value>The offset.</value>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Range`1.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.TaskRunner">
+            <summary>
+            Manages the execution and cancellation of asynchronous tasks.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.TaskRunner"/> class.
+            </summary>
+            <param name="interval">The interval.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.TaskRunner.Interval">
+            <summary>
+            Gets the interval.
+            </summary>
+            <value>
+            The interval.
+            </value>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.TaskRunner.OnExecute">
+            <summary>
+            Gets or sets the Action to perform on execute.
+            </summary>
+            <value>
+            The on execute.
+            </value>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.TaskRunner.OnError">
+            <summary>
+            Gets or sets the Action to perform on error.
+            </summary>
+            <value>
+            The on error.
+            </value>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.TaskRunner.IsRunning">
+            <summary>
+            Gets a value indicating whether this instance is running.
+            </summary>
+            <value>
+            <c>true</c> if this instance is running; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.Start">
+            <summary>
+            Starts an asynchronous Task
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.Stop">
+            <summary>
+            Stops this Task instance.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.Start(System.Threading.CancellationToken,System.Int32)">
+            <summary>
+            Starts the Task with the specified token.
+            </summary>
+            <param name="token">The token.</param>
+            <param name="interval">The interval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TaskRunner.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.TimestampConverter">
+            <summary>
+            Converts a <see cref="T:Energistics.DataAccess.Timestamp"/> to and from JSON.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TimestampConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns><c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TimestampConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.TimestampConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read. If there is no existing value then <c>null</c> will be used.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>The object value.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.XmlAttributeCache`1">
+            <summary>
+            Caches XML attributes for data type members.
+            </summary>
+            <typeparam name="TAttribute">The type of the attribute.</typeparam>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlAttributeCache`1.GetCustomAttribute(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the custom attribute.  Tries to get it from the cache first and then through reflection if not in the cache.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>The attribute or <c>null</c> if no such attribute exists.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlAttributeCache`1.GetCustomAttributes(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the custom attributes.  Tries to get them from the cache first and then through reflection if not in the cache.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>The attributes or <c>null</c> if no such attributes exist.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlAttributeCache`1.IsDefined(System.Reflection.MemberInfo)">
+            <summary>
+            Determines whether there is an attribute of <typeparamref name="TAttribute"/> defined on the member.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>
+              <c>true</c> if the specified member information is defined; otherwise, <c>false</c>.
+            </returns>
+            <remarks>
+            Includes derived types, but this is ignored for properties and events.
+            </remarks>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.XmlUtil">
+            <summary>
+            Provides custom extension methods for .NET XML types.
+            </summary>
+        </member>
+        <member name="F:PDS.WITSMLstudio.Framework.XmlUtil.Xsi">
+            <summary>The xsi namespace.</summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.#cctor">
+            <summary>
+            Initializes the <see cref="T:PDS.WITSMLstudio.Framework.XmlUtil"/> class.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.GetNamespaceManager(System.Xml.Linq.XNode,System.String)">
+            <summary>
+            Gets the namespace manager for the specified XML node.
+            </summary>
+            <param name="node">The XML node.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>An <see cref="T:System.Xml.XmlNamespaceManager" /> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.IncludeNamespacePrefix(System.String,System.String)">
+            <summary>
+            Includes the namespace prefix.
+            </summary>
+            <param name="expression">The expression.</param>
+            <param name="prefix">The prefix.</param>
+            <returns>The updated expression.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.GetElement(System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Get the node in the document using the specified XPath expression.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="xpath">The xpath.</param>
+            <returns>A <see cref="T:System.Xml.Linq.XElement"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.Clone(System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Creates a clone of the node in the document using the specified XPath expression.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="xpath">The xpath.</param>
+            <returns>A new <see cref="T:System.Xml.Linq.XDocument"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.UpdateRootElementName(System.Xml.Linq.XElement,System.Type,System.Boolean,System.String)">
+            <summary>
+            Updates the name of the root element.
+            </summary>
+            <param name="element">The element.</param>
+            <param name="type">The type.</param>
+            <param name="removeTypePrefix">if set to <c>true</c> any type prefix will be removed.</param>
+            <param name="elementNameOverride"></param>
+            <returns>A new <see cref="T:System.Xml.Linq.XElement"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.ToXmlElement(System.Xml.Linq.XElement)">
+            <summary>
+            Converts an <see cref="T:System.Xml.Linq.XElement"/> to an <see cref="T:System.Xml.XmlElement"/>.
+            </summary>
+            <param name="element">The element.</param>
+            <returns>An <see cref="T:System.Xml.XmlElement"/> instance.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.XmlUtil.Evaluate(System.Xml.Linq.XDocument,System.String,System.Xml.IXmlNamespaceResolver)">
+            <summary>
+            Evaluates the specified XPath expression.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="expression">The expression.</param>
+            <param name="resolver">The resolver.</param>
+            <returns>A collection of elements or attributes.</returns>
+        </member>
+    </members>
+</doc>

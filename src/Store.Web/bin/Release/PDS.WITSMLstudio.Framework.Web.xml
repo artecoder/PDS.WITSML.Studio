@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDS.WITSMLstudio.Framework.Web</name>
+    </assembly>
+    <members>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.ContainerConfiguration">
+            <summary>
+            Provides helper methods for configuring dependency injection for web applications.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.ContainerConfiguration.Register(System.String)">
+            <summary>
+            Registers a dependency resolver using the specified assembly path.
+            </summary>
+            <param name="assemblyPath">The assembly path.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.ContainerConfiguration.MapWorkingDirectory(System.String)">
+            <summary>
+            Maps the specified path relative to the current working directory.
+            </summary>
+            <param name="path">The relative path.</param>
+            <returns>The absolute path.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.ControllerFactory">
+            <summary>
+            Represents a controller factory with knowledge of the composition container.
+            </summary>
+            <seealso cref="T:System.Web.Mvc.DefaultControllerFactory" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.ControllerFactory.#ctor(PDS.WITSMLstudio.Framework.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Web.ControllerFactory"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="P:PDS.WITSMLstudio.Framework.Web.ControllerFactory.Container">
+            <summary>
+            Gets the composition container.
+            </summary>
+            <value>The container.</value>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.ControllerFactory.GetControllerInstance(System.Web.Routing.RequestContext,System.Type)">
+            <summary>
+            Retrieves the controller instance for the specified request context and controller type.
+            </summary>
+            <param name="requestContext">The context of the HTTP request, which includes the HTTP context and route data.</param>
+            <param name="controllerType">The type of the controller.</param>
+            <returns>The controller instance.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.DependencyResolver">
+            <summary>
+            Provides access to the composition container used for dependency injection.
+            </summary>
+            <seealso cref="T:System.Web.Http.Dependencies.IDependencyResolver" />
+            <seealso cref="T:System.Web.Mvc.IDependencyResolver" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.#ctor(PDS.WITSMLstudio.Framework.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Web.DependencyResolver"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.BeginScope">
+            <summary>
+            Starts a resolution scope.
+            </summary>
+            <returns>The dependency scope.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.GetService(System.Type)">
+            <summary>
+            Retrieves a service from the scope.
+            </summary>
+            <param name="serviceType">The service to be retrieved.</param>
+            <returns>The retrieved service.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.GetServices(System.Type)">
+            <summary>
+            Retrieves a collection of services from the scope.
+            </summary>
+            <param name="serviceType">The collection of services to be retrieved.</param>
+            <returns>The retrieved collection of services.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.DependencyResolver.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Security.BasicAuthenticationModule">
+            <summary>
+            Provides basic authentication.
+            </summary>
+            <seealso cref="T:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.BasicAuthenticationModule.VerifyBasicAuthentication(System.String)">
+            <summary>
+            Verifies the Basic authentication token.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule">
+            <summary>
+            Provides custom authentication to the module.
+            </summary>
+            <seealso cref="T:System.Web.IHttpModule" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Initializes a module and prepares it to handle requests.
+            </summary>
+            <param name="context">An <see cref="T:System.Web.HttpApplication" /> that provides access to the methods, properties, and events common to all application objects within an ASP.NET application</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.OnApplicationAuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            Called when application authenticate request.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.OnApplicationEndRequest(System.Object,System.EventArgs)">
+            <summary>
+            Called when application end request. If the request was unauthorized, the WWW-Authenticate header is added to the response.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.DenyAccess">
+            <summary>
+            Denies the access.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.SetPrincipal(System.Security.Principal.IPrincipal)">
+            <summary>
+            Sets the principal.
+            </summary>
+            <param name="principal">The principal.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.VerifyAuthenticationHeader(System.Net.Http.Headers.AuthenticationHeaderValue)">
+            <summary>
+            Verifies the authentication header.
+            </summary>
+            <param name="authHeaderVal">The authentication header value.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.VerifyBasicAuthentication(System.String)">
+            <summary>
+            Verifies the basic authentication.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.VerifyBearerAuthentication(System.String)">
+            <summary>
+            Verifies the bearer authentication.
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.ConvertToBasicAuthentication(System.String,System.String)">
+            <summary>
+            Converts the supplied credentials to a Basic authentication header.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns>A Basic authentication header.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Security.CustomAuthenticationModule.Dispose">
+            <summary>
+            Disposes of the resources (other than memory) used by the module.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior">
+            <summary>
+            Contract behavior implementation that provides access to the composition container used for dependency injection.
+            </summary>
+            <seealso cref="T:System.ServiceModel.Description.IContractBehavior" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior.#ctor(System.ServiceModel.Dispatcher.IInstanceProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior"/> class.
+            </summary>
+            <param name="instanceProvider">The instance provider.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior.AddBindingParameters(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Configures any binding elements to support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract description to modify.</param>
+            <param name="endpoint">The endpoint to modify.</param>
+            <param name="bindingParameters">The objects that binding elements require to support the behavior.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior.ApplyClientBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.ClientRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description for which the extension is intended.</param>
+            <param name="endpoint">The endpoint.</param>
+            <param name="clientRuntime">The client runtime.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint,System.ServiceModel.Dispatcher.DispatchRuntime)">
+            <summary>
+            Implements a modification or extension of the client across a contract.
+            </summary>
+            <param name="contractDescription">The contract description to be modified.</param>
+            <param name="endpoint">The endpoint that exposes the contract.</param>
+            <param name="dispatchRuntime">The dispatch runtime that controls service execution.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceContractBehavior.Validate(System.ServiceModel.Description.ContractDescription,System.ServiceModel.Description.ServiceEndpoint)">
+            <summary>
+            Implement to confirm that the contract and endpoint can support the contract behavior.
+            </summary>
+            <param name="contractDescription">The contract to validate.</param>
+            <param name="endpoint">The endpoint to validate.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior">
+            <summary>
+            Service behavior implementation that provides error logging for unhandled exceptions.
+            </summary>
+            <seealso cref="T:System.ServiceModel.Description.IServiceBehavior" />
+            <seealso cref="T:System.ServiceModel.Dispatcher.IErrorHandler" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior.HandleError(System.Exception)">
+            <summary>
+            Enables error-related processing and returns a value that indicates whether the dispatcher aborts the session and the instance context in certain cases.
+            </summary>
+            <param name="error">The exception thrown during processing.</param>
+            <returns>
+            true if Windows Communication Foundation (WCF) should not abort the session (if there is one) and instance context if the 
+            instance context is not <see cref="F:System.ServiceModel.InstanceContextMode.Single" />; otherwise, false. The default is false.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior.ProvideFault(System.Exception,System.ServiceModel.Channels.MessageVersion,System.ServiceModel.Channels.Message@)">
+            <summary>
+            Enables the creation of a custom <see cref="T:System.ServiceModel.FaultException`1" /> that is returned from an exception in the course of a service method.
+            </summary>
+            <param name="error">The <see cref="T:System.Exception" /> object thrown in the course of the service operation.</param>
+            <param name="version">The SOAP version of the message.</param>
+            <param name="fault">The <see cref="T:System.ServiceModel.Channels.Message" /> object that is returned to the client, or service, in the duplex case.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior.AddBindingParameters(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase,System.Collections.ObjectModel.Collection{System.ServiceModel.Description.ServiceEndpoint},System.ServiceModel.Channels.BindingParameterCollection)">
+            <summary>
+            Provides the ability to pass custom data to binding elements to support the contract implementation.
+            </summary>
+            <param name="serviceDescription">The service description of the service.</param>
+            <param name="serviceHostBase">The host of the service.</param>
+            <param name="endpoints">The service endpoints.</param>
+            <param name="bindingParameters">Custom objects to which binding elements have access.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior.ApplyDispatchBehavior(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to change run-time property values or insert custom extension objects such as error handlers, 
+            message or parameter interceptors, security extensions, and other custom extension objects.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The host that is currently being built.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior.Validate(System.ServiceModel.Description.ServiceDescription,System.ServiceModel.ServiceHostBase)">
+            <summary>
+            Provides the ability to inspect the service host and the service description to confirm that the service can run successfully.
+            </summary>
+            <param name="serviceDescription">The service description.</param>
+            <param name="serviceHostBase">The service host that is currently being constructed.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextExtension">
+            <summary>
+            Service extension that provides access to the composition container used for dependency injection.
+            </summary>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextExtension.Attach(System.ServiceModel.InstanceContext)">
+            <summary>
+            Enables an extension object to find out when it has been aggregated. Called when the extension is 
+            added to the <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" /> property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextExtension.Detach(System.ServiceModel.InstanceContext)">
+            <summary>
+            Enables an object to find out when it is no longer aggregated. Called when an extension is 
+            removed from the <see cref="P:System.ServiceModel.IExtensibleObject`1.Extensions" /> property.
+            </summary>
+            <param name="owner">The extensible object that aggregates this extension.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextExtension.GetChildScope(System.Web.Http.Dependencies.IDependencyResolver)">
+            <summary>
+            Gets the child scope.
+            </summary>
+            <param name="resolver">The resolver.</param>
+            <returns>The child scope.</returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextExtension.DisposeChildScope">
+            <summary>
+            Disposes the child scope.
+            </summary>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextInitializer">
+            <summary>
+            Service extension initializer implementation.
+            </summary>
+            <seealso cref="T:System.ServiceModel.Dispatcher.IInstanceContextInitializer" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceContextInitializer.Initialize(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)">
+            <summary>
+            Provides the ability to modify the newly created <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The system-supplied instance context.</param>
+            <param name="message">The message that triggered the creation of the instance context.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider">
+            <summary>
+            Provider that resolves service instances using the registered composition container.
+            </summary>
+            <seealso cref="T:System.ServiceModel.Dispatcher.IInstanceProvider" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider.#ctor(System.Web.Http.Dependencies.IDependencyResolver,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider"/> class.
+            </summary>
+            <param name="resolver">The resolver.</param>
+            <param name="contractType">Type of the contract.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider.GetInstance(System.ServiceModel.InstanceContext,System.ServiceModel.Channels.Message)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext" /> object.</param>
+            <param name="message">The message that triggered the creation of a service object.</param>
+            <returns>
+            The service object.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider.GetInstance(System.ServiceModel.InstanceContext)">
+            <summary>
+            Returns a service object given the specified <see cref="T:System.ServiceModel.InstanceContext" /> object.
+            </summary>
+            <param name="instanceContext">The current <see cref="T:System.ServiceModel.InstanceContext" /> object.</param>
+            <returns>
+            A user-defined service object.
+            </returns>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceInstanceProvider.ReleaseInstance(System.ServiceModel.InstanceContext,System.Object)">
+            <summary>
+            Called when an <see cref="T:System.ServiceModel.InstanceContext" /> object recycles a service object.
+            </summary>
+            <param name="instanceContext">The service's instance context.</param>
+            <param name="instance">The service object to be recycled.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceHost">
+            <summary>
+            Service host implementation that provides access to the composition container used for dependency injection.
+            </summary>
+            <seealso cref="T:System.ServiceModel.ServiceHost" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceHost.#ctor(System.Web.Http.Dependencies.IDependencyResolver,System.Type,System.Uri[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceHost"/> class.
+            </summary>
+            <param name="resolver">The resolver.</param>
+            <param name="serviceType">Type of the service.</param>
+            <param name="baseAddresses">The base addresses.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceHost.ApplyContractBehaviors(System.Web.Http.Dependencies.IDependencyResolver)">
+            <summary>
+            Applies the contract behaviors.
+            </summary>
+            <param name="resolver">The resolver.</param>
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceHost.ApplyServiceBehaviors(System.Web.Http.Dependencies.IDependencyResolver)">
+            <summary>
+            Applies the service behaviors.
+            </summary>
+            <param name="resolver">The resolver.</param>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.ServiceHostFactory">
+            <summary>
+            Service host factory that provides access to the composition container used for dependency injection.
+            </summary>
+            <seealso cref="T:System.ServiceModel.Activation.ServiceHostFactory" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.ServiceHostFactory.CreateServiceHost(System.Type,System.Uri[])">
+            <summary>
+            Creates a <see cref="T:System.ServiceModel.ServiceHost" /> for a specified type of service with a specific base address.
+            </summary>
+            <param name="serviceType">Specifies the type of service to host.</param>
+            <param name="baseAddresses">The <see cref="T:System.Array" /> of type <see cref="T:System.Uri" /> that contains the base addresses for the service hosted.</param>
+            <returns>A <see cref="T:System.ServiceModel.ServiceHost" /> for the type of service specified with a specific base address.</returns>
+        </member>
+        <member name="T:PDS.WITSMLstudio.Framework.Web.Services.UnhandledExceptionHandler">
+            <summary>
+            Logs unhandled exceptions in Web API services.
+            </summary>
+            <seealso cref="T:System.Web.Http.Filters.ExceptionFilterAttribute" />
+        </member>
+        <member name="M:PDS.WITSMLstudio.Framework.Web.Services.UnhandledExceptionHandler.OnException(System.Web.Http.Filters.HttpActionExecutedContext)">
+            <summary>
+            Raises the exception event.
+            </summary>
+            <param name="actionExecutedContext">The context for the action.</param>
+        </member>
+    </members>
+</doc>

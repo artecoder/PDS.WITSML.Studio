@@ -1,0 +1,1430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Namespaces>
+  <Namespace Name="PDS.WITSMLstudio.Framework">
+   <Messages>
+    <Message Id="PDS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'PDS' in namespace name 'PDS.WITSMLstudio.Framework' by changing it to 'Pds'.</Issue>
+    </Message>
+    <Message Id="WITSM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'WITSM' in namespace name 'PDS.WITSMLstudio.Framework' by changing it to 'Witsm'.</Issue>
+    </Message>
+    <Message Id="Lstudio" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Lstudio' in namespace name 'PDS.WITSMLstudio.Framework'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Release\PDS.WITSMLstudio.Framework.dll">
+   <Modules>
+    <Module Name="pds.witsmlstudio.framework.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'PDS.WITSMLstudio.Framework.dll' with a strong name key.</Issue>
+      </Message>
+      <Message Id="PDS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'PDS' in assembly name 'PDS.WITSMLstudio.Framework.dll' by changing it to 'Pds'.</Issue>
+      </Message>
+      <Message Id="WITSM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'WITSM' in assembly name 'PDS.WITSMLstudio.Framework.dll' by changing it to 'Witsm'.</Issue>
+      </Message>
+      <Message Id="Lstudio" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Lstudio' in assembly name 'PDS.WITSMLstudio.Framework.dll'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'PDS.WITSMLstudio.Framework.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="PDS.WITSMLstudio.Framework">
+       <Types>
+        <Type Name="CapabilityConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Functions" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="84">Change 'CapabilityConfig.Functions' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="84">Change 'List&lt;string&gt;' in 'CapabilityConfig.Functions' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ObjectTypes" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="89">Change 'CapabilityConfig.ObjectTypes' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="89">Change 'List&lt;string&gt;' in 'CapabilityConfig.ObjectTypes' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ConfiguredCatalog" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Rename 'ConfiguredCatalog' to end in 'Collection'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ConfiguredCatalog.cs" Line="47">In externally visible method 'ConfiguredCatalog.ConfiguredCatalog(ComposablePartCatalog, string)', validate parameter 'catalog' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Configuration" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ConfiguredCatalog.cs" Line="55">The 'this' parameter (or 'Me' in Visual Basic) of 'ConfiguredCatalog.Configuration' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetContainerConfig(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ConfiguredCatalog.cs" Line="92">Modify 'ConfiguredCatalog.GetContainerConfig(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPartFilter(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ConfiguredCatalog.cs" Line="74">'ConfiguredCatalog.GetPartFilter(string)' passes 'StringComparison.InvariantCultureIgnoreCase' as the 'StringComparison' parameter to 'string.IndexOf(string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Container" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="219">Change 'Container.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Register`1(!!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="68">Replace method 'Container.Register&lt;T&gt;(T, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resolve(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="101">Replace method 'Container.Resolve(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resolve`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="85">Replace method 'Container.Resolve&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResolveAll(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="133">Replace method 'Container.ResolveAll(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="143">In externally visible method 'Container.ResolveAll(Type, string)', validate parameter 'type' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResolveAll`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="116">Replace method 'Container.ResolveAll&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryResolve(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="175">Replace method 'Container.TryResolve(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="177">Modify 'Container.TryResolve(Type, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryResolve`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="157">Replace method 'Container.TryResolve&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Container.cs" Line="159">Modify 'Container.TryResolve&lt;T&gt;(string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ContainerConfig" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ExcludedAssemblies" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="31">Change 'ContainerConfig.ExcludedAssemblies' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="31">Change 'List&lt;string&gt;' in 'ContainerConfig.ExcludedAssemblies' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExcludedTypes" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="36">Change 'ContainerConfig.ExcludedTypes' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="36">Change 'List&lt;string&gt;' in 'ContainerConfig.ExcludedTypes' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IncludedTypes" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="41">Change 'ContainerConfig.IncludedTypes' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerConfig.cs" Line="41">Change 'List&lt;string&gt;' in 'ContainerConfig.IncludedTypes' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ContainerFactory" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Create(System.ComponentModel.Composition.Primitives.ComposablePartCatalog,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="63">Replace method 'ContainerFactory.Create(ComposablePartCatalog, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="75">In method 'ContainerFactory.Create(ComposablePartCatalog, string)', object 'instance' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'instance' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="68">In method 'ContainerFactory.Create(ComposablePartCatalog, string)', call System.IDisposable.Dispose on object 'catalog' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="74">In method 'ContainerFactory.Create(ComposablePartCatalog, string)', call System.IDisposable.Dispose on object 'new CompositionContainer(catalog, true, )' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Create(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="51">Replace method 'ContainerFactory.Create(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="51">In method 'ContainerFactory.Create(string)', object 'catalog' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'catalog' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="ContainerFactory.cs" Line="52">In method 'ContainerFactory.Create(string)', call System.IDisposable.Dispose on object 'new AggregateCatalog(catalog)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DateTimeExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FromUnixTimeMicroseconds(System.Int64,System.Nullable`1&lt;System.TimeSpan&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="42">Replace method 'DateTimeExtensions.FromUnixTimeMicroseconds(long, TimeSpan?)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToDisplayDateTime(Energistics.DataAccess.Timestamp,System.TimeSpan)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.DateTimeOffset.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="163">Because the behavior of 'DateTimeOffset.ToString(string)' could vary based on the current user's locale settings, replace this call in 'DateTimeExtensions.ToDisplayDateTime(this Timestamp, TimeSpan)' with a call to 'DateTimeOffset.ToString(string, IFormatProvider)'. If the result of 'DateTimeOffset.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToTimeZone(System.TimeSpan)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="129">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'DateTimeExtensions.ToTimeZone(this TimeSpan)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToUnixTimeMicroseconds(System.DateTime)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="72">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'DateTimeExtensions.ToUnixTimeMicroseconds(this DateTime)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.DateTimeOffset.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="72">Because the behavior of 'DateTimeOffset.Parse(string)' could vary based on the current user's locale settings, replace this call in 'DateTimeExtensions.ToUnixTimeMicroseconds(this DateTime)' with a call to 'DateTimeOffset.Parse(string, IFormatProvider)'. If the result of 'DateTimeOffset.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TruncateToHours(System.DateTimeOffset)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Date" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="213">In member 'DateTimeExtensions.TruncateToHours(this DateTimeOffset)', correct the casing of 'Date' in parameter name 'DateTimeOffset' by changing it to 'date'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TruncateToMilliseconds(System.DateTimeOffset)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Date" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="243">In member 'DateTimeExtensions.TruncateToMilliseconds(this DateTimeOffset)', correct the casing of 'Date' in parameter name 'DateTimeOffset' by changing it to 'date'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TruncateToMinutes(System.DateTimeOffset)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Date" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="223">In member 'DateTimeExtensions.TruncateToMinutes(this DateTimeOffset)', correct the casing of 'Date' in parameter name 'DateTimeOffset' by changing it to 'date'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TruncateToSeconds(System.DateTimeOffset)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Date" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="DateTimeExtensions.cs" Line="233">In member 'DateTimeExtensions.TruncateToSeconds(this DateTimeOffset)', correct the casing of 'Date' in parameter name 'DateTimeOffset' by changing it to 'date'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Enum`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+           <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'Enum&lt;T&gt;' so that it does not end in 'Enum'.</Issue>
+          </Message>
+          <Message Id="Enum" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">Rename type 'Enum&lt;T&gt;' so that it no longer conflicts with the reserved language keyword 'Enum'. Using a reserved keyword as the name of a type makes it harder for consumers in other languages to use the type.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#op_Explicit(!0):PDS.WITSMLstudio.Framework.Enum`1&lt;!0&gt;" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="105">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'Enum&lt;T&gt;.explicit operator Enum&lt;T&gt;(T)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#op_Explicit(PDS.WITSMLstudio.Framework.Enum`1&lt;!0&gt;):!0" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="125">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'Enum&lt;T&gt;.explicit operator T(Enum&lt;T&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#op_Explicit(PDS.WITSMLstudio.Framework.Enum`1&lt;!0&gt;):System.String" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="95">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'Enum&lt;T&gt;.explicit operator string(Enum&lt;T&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#op_Explicit(System.Enum):PDS.WITSMLstudio.Framework.Enum`1&lt;!0&gt;" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="115">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'Enum&lt;T&gt;.explicit operator Enum&lt;T&gt;(Enum)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#op_Explicit(System.String):PDS.WITSMLstudio.Framework.Enum`1&lt;!0&gt;" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="Multiple" Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="85">Provide a method named 'ToXXX' or 'FromXXX' as an alternate for operator 'Enum&lt;T&gt;.explicit operator Enum&lt;T&gt;(string)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Parse(System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="75">Replace method 'Enum&lt;T&gt;.Parse(string, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Enum.cs" Line="75">Remove 'Enum&lt;T&gt;.Parse(string, bool)' from 'Enum&lt;T&gt;' or make it an instance member.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FrameworkExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#All`1(System.Collections.Generic.IList`1&lt;!!0&gt;,System.Func`2&lt;!!0,System.Boolean&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="410">In externally visible method 'FrameworkExtensions.All&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, bool&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="412">In externally visible method 'FrameworkExtensions.All&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, bool&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#All`1(System.Collections.Generic.IList`1&lt;!!0&gt;,System.Func`3&lt;!!0,System.Int32,System.Boolean&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="427">In externally visible method 'FrameworkExtensions.All&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, int, bool&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="429">In externally visible method 'FrameworkExtensions.All&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, int, bool&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Any`1(System.Collections.Generic.IList`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="364">In externally visible method 'FrameworkExtensions.Any&lt;T&gt;(this IList&lt;T&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Any`1(System.Collections.Generic.IList`1&lt;!!0&gt;,System.Func`2&lt;!!0,System.Boolean&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="376">In externally visible method 'FrameworkExtensions.Any&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, bool&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="378">In externally visible method 'FrameworkExtensions.Any&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, bool&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Any`1(System.Collections.Generic.IList`1&lt;!!0&gt;,System.Func`3&lt;!!0,System.Int32,System.Boolean&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="393">In externally visible method 'FrameworkExtensions.Any&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, int, bool&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="395">In externally visible method 'FrameworkExtensions.Any&lt;T&gt;(this IList&lt;T&gt;, Func&lt;T, int, bool&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Contains(System.String,System.Char)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="494">In externally visible method 'FrameworkExtensions.Contains(this string, char)', validate parameter 'instance' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ContainsIgnoreCase(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="192">'FrameworkExtensions.ContainsIgnoreCase(this string, string)' passes 'StringComparison.InvariantCultureIgnoreCase' as the 'StringComparison' parameter to 'string.IndexOf(string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Decrypt(System.String,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="823">Replace method 'FrameworkExtensions.Decrypt(this string, string, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Encrypt(System.String,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="805">Replace method 'FrameworkExtensions.Encrypt(this string, string, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EqualsIgnoreCase(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="217">In method 'FrameworkExtensions.EqualsIgnoreCase(this string, string)', consider providing a more meaningful name than parameter name 'a'.</Issue>
+            </Message>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="217">In method 'FrameworkExtensions.EqualsIgnoreCase(this string, string)', consider providing a more meaningful name than parameter name 'b'.</Issue>
+            </Message>
+            <Message Id="System.String.Equals(System.String,System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="217">'FrameworkExtensions.EqualsIgnoreCase(this string, string)' passes 'StringComparison.InvariantCultureIgnoreCase' as the 'StringComparison' parameter to 'string.Equals(string, string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ForEach`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Action`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="316">In externally visible method 'FrameworkExtensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ForEach`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Action`2&lt;!!0,System.Int32&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="334">In externally visible method 'FrameworkExtensions.ForEach&lt;T&gt;(this IEnumerable&lt;T&gt;, Action&lt;T, int&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ForEach`1(System.Collections.Generic.IList`1&lt;!!0&gt;,System.Action`2&lt;!!0,System.Int32&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="348">In externally visible method 'FrameworkExtensions.ForEach&lt;T&gt;(this IList&lt;T&gt;, Action&lt;T, int&gt;)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="350">In externally visible method 'FrameworkExtensions.ForEach&lt;T&gt;(this IList&lt;T&gt;, Action&lt;T, int&gt;)', validate parameter 'action' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAssemblyVersion(System.Type,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="53">Replace method 'FrameworkExtensions.GetAssemblyVersion(this Type, int)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="53">In externally visible method 'FrameworkExtensions.GetAssemblyVersion(this Type, int)', validate parameter 'type' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAttribute`1(System.Enum)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="589">In externally visible method 'FrameworkExtensions.GetAttribute&lt;TAttribute&gt;(this Enum)', validate parameter 'value' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetBaseException`1(System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="868">In externally visible method 'FrameworkExtensions.GetBaseException&lt;T&gt;(this Exception)', validate parameter 'ex' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPropertyValue(System.Object,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="534">In externally visible method 'FrameworkExtensions.GetPropertyValue(this object, string)', validate parameter 'propertyPath' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#JoinQuotedStrings(System.Collections.Generic.IEnumerable`1&lt;System.String&gt;,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String,System.StringComparison)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="155">'FrameworkExtensions.JoinQuotedStrings(this IEnumerable&lt;string&gt;, string)' passes 'StringComparison.InvariantCulture' as the 'StringComparison' parameter to 'string.IndexOf(string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="155">'FrameworkExtensions.JoinQuotedStrings(this IEnumerable&lt;string&gt;, string)' passes 'StringComparison.InvariantCulture' as the 'StringComparison' parameter to 'string.IndexOf(string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+             <Issue Name="StringComparison" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="155">'FrameworkExtensions.JoinQuotedStrings(this IEnumerable&lt;string&gt;, string)' passes 'StringComparison.InvariantCulture' as the 'StringComparison' parameter to 'string.IndexOf(string, StringComparison)'. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NextOrDefault`1(System.Collections.Generic.IList`1&lt;!!0&gt;,!!0)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="293">In externally visible method 'FrameworkExtensions.NextOrDefault&lt;T&gt;(this IList&lt;T&gt;, T)', validate parameter 'collection' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ParseEnum(System.Type,System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="732">Replace method 'FrameworkExtensions.ParseEnum(this Type, string, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="739">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FrameworkExtensions.ParseEnum(this Type, string, bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Partition`1(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'FrameworkExtensions.Partition&lt;T&gt;(this IEnumerable&lt;T&gt;, int)' doesn't nest generic type 'IEnumerable&lt;IEnumerable&lt;T&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Split`1(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="79">Replace method 'FrameworkExtensions.Split&lt;T&gt;(this string, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="84">Modify 'FrameworkExtensions.Split&lt;T&gt;(this string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="79">In externally visible method 'FrameworkExtensions.Split&lt;T&gt;(this string, string)', validate parameter 'value' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SplitQuotedString(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="125">In method 'FrameworkExtensions.SplitQuotedString(this string, string)', object 'new StringReader(value)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StringReader(value)' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="133">Modify 'FrameworkExtensions.SplitQuotedString(this string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="117">In externally visible method 'FrameworkExtensions.SplitQuotedString(this string, string)', validate parameter 'separator' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToCamelCase(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="ToUpperInvariant" Certainty="90" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="244">In method 'FrameworkExtensions.ToCamelCase(this string)', replace the call to 'string.ToLowerInvariant()' with String.ToUpperInvariant().</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToDictionaryIgnoreCase`2(System.Collections.Generic.IEnumerable`1&lt;!!0&gt;,System.Func`2&lt;!!0,System.String&gt;,System.Func`2&lt;!!0,!!1&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Linq.Enumerable.ToDictionary&lt;System.Linq.IGrouping`2&lt;System.String,type parameter.TValue&gt;,System.String,type parameter.TValue&gt;(System.Collections.Generic.IEnumerable`1&lt;System.Linq.IGrouping`2&lt;System.String,type parameter.TValue&gt;&gt;,System.Func`2&lt;System.Linq.IGrouping`2&lt;System.String,type parameter.TValue&gt;,System.String&gt;,System.Func`2&lt;System.Linq.IGrouping`2&lt;System.String,type parameter.TValue&gt;,type parameter.TValue&gt;,System.Collections.Generic.IEqualityComparer`1&lt;System.String&gt;)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparer" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="520">'FrameworkExtensions.ToDictionaryIgnoreCase&lt;T, TValue&gt;(this IEnumerable&lt;T&gt;, Func&lt;T, string&gt;, Func&lt;T, TValue&gt;)' passes 'StringComparer.InvariantCultureIgnoreCase' as the 'StringComparer' parameter to 'Enumerable.ToDictionary&lt;IGrouping&lt;string, TValue&gt;, string, TValue&gt;(this IEnumerable&lt;IGrouping&lt;string, TValue&gt;&gt;, Func&lt;IGrouping&lt;string, TValue&gt;, string&gt;, Func&lt;IGrouping&lt;string, TValue&gt;, TValue&gt;, IEqualityComparer&lt;string&gt;)'. To perform a non-linguistic comparison, specify 'StringComparer.Ordinal' or 'StringComparer.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+            <Message Id="System.Linq.Enumerable.ToLookup&lt;type parameter.T,System.String,type parameter.TValue&gt;(System.Collections.Generic.IEnumerable`1&lt;type parameter.T&gt;,System.Func`2&lt;type parameter.T,System.String&gt;,System.Func`2&lt;type parameter.T,type parameter.TValue&gt;,System.Collections.Generic.IEqualityComparer`1&lt;System.String&gt;)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparer" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="520">'FrameworkExtensions.ToDictionaryIgnoreCase&lt;T, TValue&gt;(this IEnumerable&lt;T&gt;, Func&lt;T, string&gt;, Func&lt;T, TValue&gt;)' passes 'StringComparer.InvariantCultureIgnoreCase' as the 'StringComparer' parameter to 'Enumerable.ToLookup&lt;T, string, TValue&gt;(this IEnumerable&lt;T&gt;, Func&lt;T, string&gt;, Func&lt;T, TValue&gt;, IEqualityComparer&lt;string&gt;)'. To perform a non-linguistic comparison, specify 'StringComparer.Ordinal' or 'StringComparer.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToSecureString(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="848">In method 'FrameworkExtensions.ToSecureString(this string)', object 'secure' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'secure' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToUniqueName(System.String,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="276">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FrameworkExtensions.ToUniqueName(this string, string[])' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="281">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'FrameworkExtensions.ToUniqueName(this string, string[])' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryParseEnum(System.Type,System.String,System.Boolean,System.Object&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="769">Modify 'FrameworkExtensions.TryParseEnum(this Type, string, bool, out object)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="UseGenericsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1007" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="752">Consider using generics instead of a reference to System.Object in 'FrameworkExtensions.TryParseEnum(this Type, string, bool, out object)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FrameworkExtensions+EnumMemberInfo" Kind="Class" Accessibility="Private" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToInt64(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="662">Because the behavior of 'Convert.ToInt64(object)' could vary based on the current user's locale settings, replace this call in 'FrameworkExtensions.EnumMemberInfo.EnumMemberInfo(Type)' with a call to 'Convert.ToInt64(object, IFormatProvider)'. If the result of 'Convert.ToInt64(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="651">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'FrameworkExtensions.EnumMemberInfo.EnumMemberInfo(Type)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="PDS.WITSMLstudio.Framework.FrameworkExtensions+EnumMemberInfo+EnumMemberData.#ctor(System.StringComparer)" TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="StringComparer" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="687">'FrameworkExtensions.EnumMemberInfo.EnumMemberInfo(Type)' passes 'StringComparer.InvariantCulture' as the 'StringComparer' parameter to 'FrameworkExtensions.EnumMemberInfo.EnumMemberData.EnumMemberData(StringComparer)'. To perform a non-linguistic comparison, specify 'StringComparer.Ordinal' or 'StringComparer.OrdinalIgnoreCase' instead.</Issue>
+             <Issue Name="StringComparer" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="687">'FrameworkExtensions.EnumMemberInfo.EnumMemberInfo(Type)' passes 'StringComparer.InvariantCultureIgnoreCase' as the 'StringComparer' parameter to 'FrameworkExtensions.EnumMemberInfo.EnumMemberData.EnumMemberData(StringComparer)'. To perform a non-linguistic comparison, specify 'StringComparer.Ordinal' or 'StringComparer.OrdinalIgnoreCase' instead.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetValue(PDS.WITSMLstudio.Framework.FrameworkExtensions+EnumMemberInfo+EnumMemberData,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="709">The 'this' parameter (or 'Me' in Visual Basic) of 'FrameworkExtensions.EnumMemberInfo.GetValue(FrameworkExtensions.EnumMemberInfo.EnumMemberData, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetValue(System.Int64)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="FrameworkExtensions.cs" Line="693">'FrameworkExtensions.EnumMemberInfo.GetValue(long)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IContainer" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BuildUp(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="BuildUp" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'BuildUp' in member name 'IContainer.BuildUp(object)' exists as a discrete term. If your usage is intended to be single word, case it as 'Buildup' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Register`1(!!0,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.Register&lt;T&gt;(T, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resolve(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.Resolve(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Resolve`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.Resolve&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResolveAll(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.ResolveAll(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResolveAll`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.ResolveAll&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryResolve(System.Type,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.TryResolve(Type, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TryResolve`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Replace method 'IContainer.TryResolve&lt;T&gt;(string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Log4NetExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#IsNoticeEnabled(log4net.ILog)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="42">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.IsNoticeEnabled(this ILog)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="42">In externally visible method 'Log4NetExtensions.IsNoticeEnabled(this ILog)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsTraceEnabled(log4net.ILog)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="151">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.IsTraceEnabled(this ILog)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="151">In externally visible method 'Log4NetExtensions.IsTraceEnabled(this ILog)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsVerboseEnabled(log4net.ILog)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="260">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.IsVerboseEnabled(this ILog)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="260">In externally visible method 'Log4NetExtensions.IsVerboseEnabled(this ILog)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Notice(log4net.ILog,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="52">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Notice(this ILog, object)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="52">In externally visible method 'Log4NetExtensions.Notice(this ILog, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Notice(log4net.ILog,System.Object,System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="63">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Notice(this ILog, object, Exception)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="63">In externally visible method 'Log4NetExtensions.Notice(this ILog, object, Exception)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NoticeFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="136">In externally visible method 'Log4NetExtensions.NoticeFormat(this ILog, IFormatProvider, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NoticeFormat(log4net.ILog,System.String,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="90">In externally visible method 'Log4NetExtensions.NoticeFormat(this ILog, string, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NoticeFormat(log4net.ILog,System.String,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="105">In externally visible method 'Log4NetExtensions.NoticeFormat(this ILog, string, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NoticeFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="121">In externally visible method 'Log4NetExtensions.NoticeFormat(this ILog, string, object, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NoticeFormat(log4net.ILog,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="76">In externally visible method 'Log4NetExtensions.NoticeFormat(this ILog, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Trace(log4net.ILog,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="161">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Trace(this ILog, object)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="161">In externally visible method 'Log4NetExtensions.Trace(this ILog, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Trace(log4net.ILog,System.Object,System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="172">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Trace(this ILog, object, Exception)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="172">In externally visible method 'Log4NetExtensions.Trace(this ILog, object, Exception)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TraceFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="245">In externally visible method 'Log4NetExtensions.TraceFormat(this ILog, IFormatProvider, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TraceFormat(log4net.ILog,System.String,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="199">In externally visible method 'Log4NetExtensions.TraceFormat(this ILog, string, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TraceFormat(log4net.ILog,System.String,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="214">In externally visible method 'Log4NetExtensions.TraceFormat(this ILog, string, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TraceFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="230">In externally visible method 'Log4NetExtensions.TraceFormat(this ILog, string, object, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TraceFormat(log4net.ILog,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="185">In externally visible method 'Log4NetExtensions.TraceFormat(this ILog, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Verbose(log4net.ILog,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="270">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Verbose(this ILog, object)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="270">In externally visible method 'Log4NetExtensions.Verbose(this ILog, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Verbose(log4net.ILog,System.Object,System.Exception)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="281">Consider changing the type of parameter 'logger' in 'Log4NetExtensions.Verbose(this ILog, object, Exception)' from 'ILog' to its base type 'ILoggerWrapper'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="281">In externally visible method 'Log4NetExtensions.Verbose(this ILog, object, Exception)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerboseFormat(log4net.ILog,System.IFormatProvider,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="354">In externally visible method 'Log4NetExtensions.VerboseFormat(this ILog, IFormatProvider, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerboseFormat(log4net.ILog,System.String,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="308">In externally visible method 'Log4NetExtensions.VerboseFormat(this ILog, string, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerboseFormat(log4net.ILog,System.String,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="323">In externally visible method 'Log4NetExtensions.VerboseFormat(this ILog, string, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerboseFormat(log4net.ILog,System.String,System.Object,System.Object,System.Object)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="339">In externally visible method 'Log4NetExtensions.VerboseFormat(this ILog, string, object, object, object)', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerboseFormat(log4net.ILog,System.String,System.Object[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Log4NetExtensions.cs" Line="294">In externally visible method 'Log4NetExtensions.VerboseFormat(this ILog, string, params object[])', validate parameter 'logger' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Range`1" Kind="Struct" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+           <Issue Name="Equals" Certainty="75" Level="Warning">'Range&lt;T&gt;' should override Equals.</Issue>
+           <Issue Name="op_Equality" Certainty="75" Level="Warning">'Range&lt;T&gt;' should override the equality (==) and inequality (!=) operators.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(!0,!0,System.Nullable`1&lt;System.TimeSpan&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Range.cs" Line="38">Replace method 'Range&lt;T&gt;.Range(T, T, TimeSpan?)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToString()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="Range.cs" Line="69">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'Range&lt;T&gt;.ToString()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TaskRunner" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="TaskRunner.cs" Line="37">Replace method 'TaskRunner.TaskRunner(int)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="TaskRunner.cs" Line="174">Change 'TaskRunner.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TimestampConverter" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="TimestampConverter.cs" Line="51">In externally visible method 'TimestampConverter.WriteJson(JsonWriter, object, JsonSerializer)', validate parameter 'writer' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="XmlAttributeCache`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetCustomAttribute(System.Reflection.MemberInfo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlAttributeCache.cs" Line="43">Remove 'XmlAttributeCache&lt;TAttribute&gt;.GetCustomAttribute(MemberInfo)' from 'XmlAttributeCache&lt;TAttribute&gt;' or make it an instance member.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCustomAttributes(System.Reflection.MemberInfo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlAttributeCache.cs" Line="63">Remove 'XmlAttributeCache&lt;TAttribute&gt;.GetCustomAttributes(MemberInfo)' from 'XmlAttributeCache&lt;TAttribute&gt;' or make it an instance member.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlAttributeCache.cs" Line="63">Change 'List&lt;TAttribute&gt;' in 'XmlAttributeCache&lt;TAttribute&gt;.GetCustomAttributes(MemberInfo)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsDefined(System.Reflection.MemberInfo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlAttributeCache.cs" Line="88">Remove 'XmlAttributeCache&lt;TAttribute&gt;.IsDefined(MemberInfo)' from 'XmlAttributeCache&lt;TAttribute&gt;' or make it an instance member.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="XmlUtil" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Util" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Util' in type name 'XmlUtil'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="47">Initialize all static fields in 'XmlUtil' when those fields are declared and remove the explicit static constructor.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Clone(System.Xml.Linq.XDocument,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="xpath" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="118">In method 'XmlUtil.Clone(this XDocument, string)', correct the spelling of 'xpath' in parameter name 'xpath' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="118">In externally visible method 'XmlUtil.Clone(this XDocument, string)', validate parameter 'document' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Evaluate(System.Xml.Linq.XDocument,System.String,System.Xml.IXmlNamespaceResolver)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="203">Consider changing the type of parameter 'document' in 'XmlUtil.Evaluate(this XDocument, string, IXmlNamespaceResolver)' from 'XDocument' to its base type 'XNode'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetElement(System.Xml.Linq.XDocument,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="xpath" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="104">In method 'XmlUtil.GetElement(this XDocument, string)', correct the spelling of 'xpath' in parameter name 'xpath' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="104">In externally visible method 'XmlUtil.GetElement(this XDocument, string)', validate parameter 'document' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNamespaceManager(System.Xml.Linq.XNode,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="59">Replace method 'XmlUtil.GetNamespaceManager(this XNode, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IncludeNamespacePrefix(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="75">Replace method 'XmlUtil.IncludeNamespacePrefix(string, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="prefix" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="75">Parameter 'prefix' of 'XmlUtil.IncludeNamespacePrefix(string, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            </Message>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="83">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'XmlUtil.IncludeNamespacePrefix(string, string)' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ToXmlElement(System.Xml.Linq.XElement)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="186">Consider changing the type of parameter 'element' in 'XmlUtil.ToXmlElement(this XElement)' from 'XElement' to its base type 'XNode'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="System.Xml.XmlNode" TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Name="Xml" Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="186">Modify member 'XmlUtil.ToXmlElement(this XElement)' so that it no longer exposes the concrete type 'XmlElement'. Use IXPathNavigable to represent XML data sources.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="186">In externally visible method 'XmlUtil.ToXmlElement(this XElement)', validate parameter 'element' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateRootElementName(System.Xml.Linq.XElement,System.Type,System.Boolean,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="135">Consider changing the type of parameter 'type' in 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)' from 'Type' to its base type 'MemberInfo'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="135">Replace method 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="147">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="149">Because the behavior of 'string.StartsWith(string)' could vary based on the current user's locale settings, replace this call in 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)' with a call to 'string.StartsWith(string, StringComparison)'. If the result of 'string.StartsWith(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="158">In externally visible method 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)', validate parameter 'element' before using it.</Issue>
+            </Message>
+            <Message Id="1" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Framework" File="XmlUtil.cs" Line="137">In externally visible method 'XmlUtil.UpdateRootElementName(this XElement, Type, bool, string)', validate parameter 'type' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Xsi" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104" Status="Active" Created="2021-05-17 02:17:27Z" FixCategory="NonBreaking">
+             <Issue Certainty="25" Level="Error">Remove the read-only designation from 'XmlUtil.Xsi' or change the field to one that is an immutable reference type. If the reference type 'XNamespace' is, in fact, immutable, exclude this message.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+   <Name>Call GC.SuppressFinalize correctly</Name>
+   <Description>Call GC.SuppressFinalize to suppress finalization of your instance once Dispose has been called. Objects that implement IDisposable should call SuppressFinalize from the IDisposable.Dispose method to prevent the garbage collector from calling Object.Finalize on an object that does not require it.</Description>
+   <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182269.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+   <Name>Consider passing base types as parameters</Name>
+   <Description>Using base types as parameters to methods improves re-use of these methods if you only use methods &amp; properties from the parameter's base class. E.g. use Stream instead of FileStream as a parameter when only calling Stream.Read(), this makes the method work on all kind of streams instead of just File streams.</Description>
+   <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/3hk32yyz.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+   <Name>Default parameters should not be used</Name>
+   <Description>Some programming languages do not support default parameters. Replace default parameters with method overloads that supply the default argument.</Description>
+   <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182135.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareReadOnlyMutableReferenceTypes" Category="Microsoft.Security" CheckId="CA2104">
+   <Name>Do not declare read only mutable reference types</Name>
+   <Description>A read-only declaration for a mutable reference type does not prevent the field's instance data from being modified. For example, a read-only StringBuilder field declaration does not make sense, since the data encapsulated by the StringBuilder can be modified using the read-only reference.</Description>
+   <Resolution Name="Default">Remove the read-only designation from {0} or change the field to one that is an immutable reference type. If the reference type {1} is, in fact, immutable, exclude this message.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182302.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="25">Error</MessageLevel>
+   <File Name="securityrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareStaticMembersOnGenericTypes" Category="Microsoft.Design" CheckId="CA1000">
+   <Name>Do not declare static members on generic types</Name>
+   <Description>The syntax for calling static members on generic types is complex as the type parameter has to be specified for each call.</Description>
+   <Resolution Name="Default">Remove {0} from {1} or make it an instance member.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182139.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+   <Name>Do not nest generic types in member signatures</Name>
+   <Description>Avoid API that require users to instantiate a generic type with another generic type as type argument. The syntax gets too complex.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182144.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+   <Resolution Name="MemberParameter">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'.</Resolution>
+   <Resolution Name="Namespace">Correct the casing of '{0}' in namespace name '{1}' by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameterMoreMeaningfulName">In method {0}, consider providing a more meaningful name than parameter name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711">
+   <Name>Identifiers should not have incorrect suffix</Name>
+   <Description>Types that do not extend certain base types should not use reserved name suffixes. Types and members should not use 'Ex' or 'New' to distinguish them from an earlier version of the same API, instead, use a numeric suffix such as '2' or provide a more meaningful suffix. Concrete type implementations and members should not end 'Impl'. Members instead, should either consider using the suggested alternate 'Core' in replacement of 'Impl' or avoid any suffix at all.</Description>
+   <Resolution Name="TypeNoAlternate">Rename type name {0} so that it does not end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182247.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716">
+   <Name>Identifiers should not match keywords</Name>
+   <Description>Identifiers which conflict with reserved language keywords should be avoided. Using a reserved keyword as an identifier makes it harder for consumers in other languages to use your API.</Description>
+   <Resolution Name="Type">Rename type {0} so that it no longer conflicts with the reserved language keyword '{1}'. Using a reserved keyword as the name of a type makes it harder for consumers in other languages to use the type.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182248.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+   <Name>Initialize reference type static fields inline</Name>
+   <Description>Static fields should be initialized when declared. Initializing static data in explicit static constructors results in less performant code.</Description>
+   <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182275.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MembersShouldNotExposeCertainConcreteTypes" Category="Microsoft.Design" CheckId="CA1059">
+   <Name>Members should not expose certain concrete types</Name>
+   <Description>Members should not expose certain concrete types.</Description>
+   <Resolution Name="Xml">Modify member {0} so that it no longer exposes the concrete type {1}. Use IXPathNavigable to represent XML data sources.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182160.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308">
+   <Name>Normalize strings to uppercase</Name>
+   <Description>Strings should be normalized to upper-case.</Description>
+   <Resolution Name="ToUpperInvariant">In method {0}, replace the call to {1} with String.ToUpperInvariant().</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386042.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225">
+   <Name>Operator overloads have named alternates</Name>
+   <Description>When redefining operators, implement named methods to provide access to the operator functionality from languages that do not support operator overloading. For example, the functionality of the '+' operator should also be accessible using an 'Add' method.</Description>
+   <Resolution Name="Multiple">Provide a method named '{0}' or '{1}' as an alternate for operator {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182355.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815">
+   <Name>Override equals and operator equals on value types</Name>
+   <Description>The default System.ValueType implementation might not perform as well as a custom implementation.</Description>
+   <Resolution Name="Equals">{0} should override Equals.</Resolution>
+   <Resolution Name="op_Equality">{0} should override the equality (==) and inequality (!=) operators.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182276.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+   <Name>Review unused parameters</Name>
+   <Description>Review parameters in non-virtual methods that are not used in the method body to ensure no correctness exists around failure to access them. Unused parameters incur maintenance and performance costs. Sometimes a violation of this rule can point to an implementation bug in the method (i.e. the parameter should actually have been used in the method body). Exclude warnings of this rule if the parameter has to exist because of backward compatibility.</Description>
+   <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182268.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Specify StringComparison</Name>
+   <Description>If an overload exists that takes a StringComparison argument, it should always be called in favor of an overload that does not.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseGenericsWhereAppropriate" Category="Microsoft.Design" CheckId="CA1007">
+   <Name>Use generics where appropriate</Name>
+   <Description>References passed to ref parameters must be the exact type of the parameter. Using generics enable the method for general use.</Description>
+   <Resolution Name="Default">Consider using generics instead of a reference to System.Object in {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182179.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseOrdinalStringComparison" Category="Microsoft.Globalization" CheckId="CA1309">
+   <Name>Use ordinal StringComparison</Name>
+   <Description>For non-linguistic comparisons, StringComparison.Ordinal or StringComparison.OrdinalIgnoreCase should be used instead of the linguistically-sensitive StringComparison.InvariantCulture.</Description>
+   <Resolution Name="StringComparer">{0} passes '{1}' as the 'StringComparer' parameter to {2}. To perform a non-linguistic comparison, specify 'StringComparer.Ordinal' or 'StringComparer.OrdinalIgnoreCase' instead.</Resolution>
+   <Resolution Name="StringComparison">{0} passes '{1}' as the 'StringComparison' parameter to {2}. To perform a non-linguistic comparison, specify 'StringComparison.Ordinal' or 'StringComparison.OrdinalIgnoreCase' instead.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385972.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

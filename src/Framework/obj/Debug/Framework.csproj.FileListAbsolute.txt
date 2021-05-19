@@ -1,0 +1,16 @@
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\PDS.WITSMLstudio.Framework.dll.config
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\PDS.WITSMLstudio.Framework.xml
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\PDS.WITSMLstudio.Framework.dll
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\PDS.WITSMLstudio.Framework.pdb
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\Energistics.DataAccess.dll
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\log4net.dll
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\Energistics.DataAccess.pdb
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\Energistics.DataAccess.xml
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\log4net.xml
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\obj\Debug\Framework.csprojAssemblyReference.cache
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\obj\Debug\Framework.csproj.CopyComplete
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\obj\Debug\PDS.WITSMLstudio.Framework.dll
+C:\Users\rarteaga\Source\Repos\witsml\src\Framework\obj\Debug\PDS.WITSMLstudio.Framework.pdb

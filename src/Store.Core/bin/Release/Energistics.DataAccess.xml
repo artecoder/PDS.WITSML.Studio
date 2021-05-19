@@ -1,0 +1,1252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Energistics.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:Energistics.DataAccess.AbstractWebServiceConnection">
+            <summary>
+            AbstractWebServiceConnection class. Used to derive new web service connections
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.AbstractWebServiceConnection.#ctor(System.String)">
+            <summary>
+            Constructs a new instance of a AbstractWebServiceConnection
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.UseDefaultNetworkCredentials">
+            <summary>
+            Set to true to use default network credentials. Set to false to use username / password
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.Url">
+            <summary>
+            The target URL of the WITSML web service
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.Username">
+            <summary>
+            The username to use when authenticating with the WITSML web service
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.Domain">
+            <summary>
+            The domain that the username belongs to
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.Timeout">
+            <summary>
+            Indicates the time an XML Web service client waits for a synchronous XML Web service request to complete (in milliseconds).
+            Default: 60000 ms
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.AbstractWebServiceConnection.SetSecurePassword(System.Security.SecureString)">
+            <summary>
+            The password to use when authenticating with the WITSML web service
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.AbstractWebServiceConnection.SetPassword(System.String)">
+            <summary>
+            The password to use when authenticating with the WITSML web service.
+            Whenever possible, you should set SecurePassword instead.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.AbstractWebServiceConnection.Proxy">
+            <summary>
+            Optional web proxy to use when making connections.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.AbstractWebServiceConnection.GetNetworkCredential">
+            <summary>
+            Gets the NetworkCredential from username/password
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.ExtensibleEnum`1">
+            <summary>
+            A class used to support the EnumExtensionPattern from EML Common.  This pattern is used to construct a union between
+            an explicitly defined standard enumeration (<typeparamref name="TEnum"/>) and a custom enumeration string following the pattern: &quot;.*:.*&quot;
+            </summary>
+            <typeparam name="TEnum">The <typeparamref name="TEnum"/> enumeration to use as the native enumeration.</typeparam>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.#cctor">
+            <summary>
+            Static constructor to initialize serialization dictionaries.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ExtensibleEnum`1.Enum">
+            <summary>
+            The standard enumeration value, if set.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ExtensibleEnum`1.Extension">
+            <summary>
+            A custom extension value, if set.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ExtensibleEnum`1.IsEnum">
+            <summary>
+            Whether the standard enumeration value is set or not.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ExtensibleEnum`1.IsExtension">
+            <summary>
+            Whether a custom enumeration value is set or not.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.#ctor(`0)">
+            <summary>
+            Initializes a new <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instance from the specified enumeration value.
+            </summary>
+            <param name="enum">The specified enumeration value.</param>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.#ctor(System.String)">
+            <summary>
+            Initializes a new <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instance from the specified string enumeration value.
+            </summary>
+            <param name="enum">The specified string enumeration value.</param>
+            <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.InitializeFromString(System.String)">
+            <summary>
+            Initializes this instance from a string.  If the string is parsable
+            as a <typeparamref name="TEnum"/> instance, then that is used.  Otherwise,
+            the string is treated as an extension.
+            </summary>
+            <param name="enum">The string enumeration to initialize from.</param>
+            <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.ConvertToString">
+            <summary>
+            Converts this instance to a string.
+            </summary>
+            <returns>The string version of this enumeration.</returns>
+            <remarks>The XML Enumeration string representation is given priority over the .NET code string representaiton</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.CompareTo(Energistics.DataAccess.ExtensibleEnum{`0})">
+            <summary>
+            Compares two <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instances.
+            </summary>
+            <param name="other">The instance to compare against.</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.Equals(Energistics.DataAccess.ExtensibleEnum{`0})">
+            <summary>
+            Compares two <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instances for equality.
+            </summary>
+            <param name="other">The instance to compare against.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.CompareTo(`0)">
+            <summary>
+            Compares two <typeparamref name="TEnum"/> instances.
+            </summary>
+            <param name="other">The instance to compare against.</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.Equals(`0)">
+            <summary>
+            Compares two <typeparamref name="TEnum"/> instances for equality.
+            </summary>
+            <param name="other">The instance to compare against.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.Equals(System.Object)">
+            <summary>
+            Compares this <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> with an object for equality.
+            </summary>
+            <param name="obj">The object to compare against.</param>
+            <returns><c>true</c> if the instances are equal; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.ToString">
+            <summary>
+            Creates a string representation of this instance.
+            </summary>
+            <returns>The string representation of this instance.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.GetHashCode">
+            <summary>
+            Gets the hash code for this instance.
+            </summary>
+            <returns>The hashcode for this instance.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.System#Xml#Serialization#IXmlSerializable#GetSchema">
+            <summary>
+            Gets the <see cref="T:System.Xml.Schema.XmlSchema"/> used for XML Serialization for this instance.
+            </summary>
+            <exception cref="T:System.NotImplementedException">Any call to this method.</exception>
+            <remarks>This method is not implemented.</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.System#Xml#Serialization#IXmlSerializable#ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads this instance from an <see cref="T:System.Xml.XmlReader"/> for XML Serialization.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> to read the instance data from.</param>
+            <remarks>This method is to support XML Serialization.  It should not be used directly.</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.System#Xml#Serialization#IXmlSerializable#WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Writes this instance to an <see cref="T:System.Xml.XmlWriter"/> for XML Serialization.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlWriter"/> to write the instance data to.</param>
+            <remarks>This method is to support XML Serialization.  It should not be used directly.</remarks>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.op_Implicit(Energistics.DataAccess.ExtensibleEnum{`0})~`0">
+            <summary>
+            Implicit conversion operator to <typeparamref name="TEnum"/>.
+            </summary>
+            <param name="enum">The <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instance to convert.</param>
+            <returns>The native enumeration value if set or the default value for <typeparamref name="TEnum"/> if not set.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.op_Implicit(Energistics.DataAccess.ExtensibleEnum{`0})~System.String">
+            <summary>
+            Implicit conversion operator to <see cref="T:System.String"/>.
+            </summary>
+            <param name="enum">The <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> instance to convert.</param>
+            <returns>The string representation of the <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/>.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.ExtensibleEnum`1.op_Implicit(`0)~Energistics.DataAccess.ExtensibleEnum{`0}">
+            <summary>
+            Implicit conversion operator from a <see cref="T:System.String"/>.
+            </summary>
+            <param name="enum">The <see cref="T:System.String"/> instance to convert.</param>
+            <returns>A <see cref="T:Energistics.DataAccess.ExtensibleEnum`1"/> initialized from the string.</returns>
+        </member>
+        <member name="T:Energistics.DataAccess.EnergisticsFile">
+            <summary>
+            Class that handles reading and writing of Energistics XML files
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsFile.ReadFile``1(System.String)">
+            <summary>
+            Reads an Energistics XML file
+            </summary>
+            <typeparam name="T">Type of the object that the file contains</typeparam>
+            <param name="fileName">Name of the XML file</param>
+            <returns>The object representation of the XML file</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsFile.WriteFile(System.String,System.Object)">
+            <summary>
+            Writes an Energistics object to an XML file. Does not overwrite existing file.
+            </summary>
+            <param name="fileName">The name of the XML file</param>
+            <param name="energisticsObject">The object to write</param>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsFile.WriteFile(System.String,System.Object,System.Boolean)">
+            <summary>
+            Writes an Energistics object to an XML file
+            </summary>
+            <param name="fileName">The name of the XML file</param>
+            <param name="energisticsObject">The object to write</param>
+            <param name="allowOverwrites">Overwrite existing file</param>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.EnumValue">
+            <summary>
+            Base class for Enumeration values that are defined in EnumValues.xml
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValue.enumValuesRegistry">
+            <summary>
+            Collection to keep track of registered EnumValues
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.#ctor">
+            <summary>
+            Protected constructor, should always pass in "name"
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the EnumValue</param>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.Register">
+            <summary>
+            Register a new EnumValue
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.GetEnumValueNameAttributeList``1">
+            <summary>
+            Retrieves the list of pre-compiled EnumValues
+            </summary>
+            <typeparam name="T">The type of EnumValue to return</typeparam>
+            <returns>The List of EnumValues</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.GetList``1">
+            <summary>
+            Retrieves the list of pre-compiled EnumValues combined with the registered EnumValues
+            </summary>
+            <typeparam name="T">The type of EnumValue to return</typeparam>
+            <returns>The List of EnumValues</returns>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValue.Name">
+            <summary>
+            The name of the value.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValue.Description">
+            <summary>
+            A description of the value.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValue.Version">
+            <summary>
+            The version when the value was added.
+            The string should match the content of the root version attribute of the schema.
+            For example, "1.4.0.0".
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValue.Deprecated">
+            <summary>
+            A non blank version indicates that the value has
+            been deprecated and may be removed in future versions.
+            The string should match the content of the root version attribute of the schema.
+            For example, "1.4.0.0".
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValue.ReplacedBy">
+            <summary>
+            The value to use as a replacement for a deprecated value.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.ToString">
+            <summary>
+            String representation of EnumValue
+            </summary>
+            <returns>String representation of EnumValue</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.Equals(System.Object)">
+            <summary>
+            Determines whether two EnumValue objects are equal
+            </summary>
+            <param name="obj">The object to compare with the current object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.op_Equality(Energistics.DataAccess.EnumValue.EnumValue,Energistics.DataAccess.EnumValue.EnumValue)">
+            <summary>
+            Determines whether two EnumValue objects are equal
+            </summary>
+            <param name="a">First EnumValue object to compare</param>
+            <param name="b">Second EnumValue object to compare</param>
+            <returns>True if the objects are equal, false if they are not</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.op_Inequality(Energistics.DataAccess.EnumValue.EnumValue,Energistics.DataAccess.EnumValue.EnumValue)">
+            <summary>
+            Determines whether two EnumValue objects are not equal
+            </summary>
+            <param name="a">First EnumValue object to compare</param>
+            <param name="b">Second EnumValue object to compare</param>
+            <returns>True if the objects are not equal, false if they are</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValue.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type. 
+            </summary>
+            <returns>A hash code for the current Object</returns>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.LithoTypeEnumValue">
+            <summary>
+            These values represent the type of qualifier in lithology.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.#ctor">
+            <summary>
+            Protected constructor, should always pass in "name"
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the LithoTypeEnumValue</param>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.LithoType">
+            <summary>
+            For lithology qualifiers, the type of qualifier: "noun", "adjective" or "both". 
+            For a qualifier which has a type of "both", the "noun" form must be specified as the qualifier value
+            and an adjective form must be listed as a variant.
+            The interpretation of whether a specified qualifier value represents a noun or a adjective is 
+            defined by its association with either an interval (adjective) or point (noun).
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.VariantOf">
+            <summary>
+            The name of the lithology qualifier for which this qualifier 
+            represents a variation of the same underlying concept. 
+            A variant will always represent either an adjective or a noun but not both.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.IsLithology">
+            <summary>
+            True ("true" or "1") indicates that the qualifier is also in the LithologyType list.
+            False ("false" or "0") indicates otherwise.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.LithoTypeEnumValue.IsMatrixCement">
+            <summary>
+            True ("true" or "1") indicates that the qualifier is also in the MatrixCementType list.
+            False ("false" or "0") indicates otherwise.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue">
+            <summary>
+            The names of agreed extensions to WITSML.
+            This list may be locally extended but it is recommended that new names be
+            approved by the WITSML SIG before use.
+            Each standard name must define its data type.
+            For string types, the maximum length must be defined in number of characters.
+            For measures, the expected measure class must be defined.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.#ctor">
+            <summary>
+            Protected constructor, should always pass in "name"
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the ExtensionDataEnumValue</param>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.ExtensionDataType">
+            <summary>
+            For extensions, the underlying data type of the value.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.ExtensionMaximumSize">
+            <summary>
+            For extensions, the maximum number of characters in a string value.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.ExtensionMeasureClass">
+            <summary>
+            For extensions, defines the measure class associated with the temm.
+            This controls the allowed units of measure. 
+            If this is specified then the value must be defined with a unit of measure.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ExtensionDataEnumValue.ExtensionPath">
+            <summary>
+            For extensions, defines the path to the allowed location in the schema
+            where the extension is allowed. 
+            This should begin at the singular object level  (e.g., "/well/commonData/extension"). 
+            A relative location will allow it in any object (i.e., ".//commonData/extension").
+            A relative location within the object will allow it at any location within that object
+            (e.g., "/opsReport//commonData/extension").
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue">
+            <summary>
+            Defines classes of measures and their allowed units of measures.
+            For a value whose underlying meaning conforms to one of these classes, 
+            any specified unit of measure must conform to the defined list.
+            These are copied from the Energistics (POSC) Units Classes v2.2.
+            The units of measure map to the POSC Units of Measure Dictionary v2.2.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue.#ctor">
+            <summary>
+            Protected constructor, should always pass in "name"
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the MeasureUOMEnumValue</param>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue.MeasureRepresentativeUOM">
+            <summary>
+            For measure classes, defines a representative uom.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue.MeasureBaseForConversion">
+            <summary>
+            For measure classes, defines the base uom for conversion.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.MeasureUOMEnumValue.MeasureUom">
+            <summary>
+            For measure classes, defines an allowed uom for the class.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue">
+            <summary>
+            Defines classes of properties. A property inherits the underlying characteristics of its parent but specializes its meaning.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.#ctor">
+            <summary>
+            Protected constructor, should always pass in "name"
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the MeasureUOMEnumValue</param>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.IsAbstract">
+            <summary>
+            True ("1" or "true") indicates that the property is abstract and cannot be used to characterize a value.
+            False ("0" or "false") or not given indicates a non-abstract property that can be instantiated.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.ParentKind">
+            <summary>
+            Points to a parent property kind
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.Category">
+            <summary>
+            A property classification.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.UnitOfMeasure">
+            <summary>
+            The allowed unit of measure for the continuous property.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.DimensionalClass">
+            <summary>
+            The dimensional analysis of the unit of measure. 
+            For example, a meter (m) would be of class "L", which represents length. 
+            A foot (ft) would also be in this dimension.
+            Note that angle       is considered to be dimensionless ratio of length.
+            Note that solid angle is considered to be dimensionless ratio of area.
+            The following nomenclature is used: 
+            	A = angle 			(SI unit = radian) 
+            	B = luminous intensity 		(SI unit = candela)
+            	C = electrical current 		(SI unit = ampere)
+            	K = thermodynamic temperature 	(SI unit = kelvin)
+            	L = length 			(SI unit = metre)
+            	M = mass 			(SI unit = kilogram)
+            	N = amount of substance 	(SI unit = mole)
+            	S = solid angle 		(SI unit = steradian)
+            	T = time 			(SI unit = second)
+            	1 = dimensionless
+            	2 = squared			(e.g., "M2")
+            	3 = cubed
+            	4 = 4th power
+            	5 = 5th power
+            	6 = 6th power
+            	7 = 7th power
+            	8 = 8th power
+            	/ = division
+            	ratio(X) = A dimensionless ratio of another dimension. 
+            	        For example, a dimensionless ratio of area would be indicated by "ratio(L2)" and represents the equivalent of "L2/L2".
+            		This is only used when the underlying dimension would otherwise be "1".
+            The values may be broken into numerator and denominator separated by a slash "/" but multiple slashes must not be used. 
+            A slash must not terminate the string.
+            For example, length per time would be indicated by "L/T"
+            A number other than "1" will always follow a single dimensional character (e.g., "M2") and will represent the power of that component.
+            The number "1" will only exist by itself or as the whole numerator (e.g., "1" or "1/T"). 
+            The number "1" must not be used as a denominator because it is implied (e.g., "M" impiles "M/1").
+            For consistency, the items within a numerator or denominator are listed in alphabetical order (i.e., LM - not ML).
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.MinimumValue">
+            <summary>
+            The minimum value allowed for the discrete property.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.MaximumValue">
+            <summary>
+            The maximum value allowed for the discrete property.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.ResqmlPropertyKindEnumValue.EnumValue">
+            <summary>
+            A value allowed for the categorical property.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.EnumValueRealtimeType">
+            <summary>
+            Lithology qualifier types.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueRealtimeType.RealtimeString">
+            <summary>
+            The value is a string. This is also appropriate for a short list of integer codes (e.g., "1", 2" or "3") or for booleans.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueRealtimeType.RealtimeNumeric">
+            <summary>
+            The value is a number and fractional component is allowed.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueRealtimeType.RealtimeInteger">
+            <summary>
+            Specialization of numeric. The value is a whole number. That is, a fractional component is not allowed.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueRealtimeType.RealtimeUnknown">
+            <summary>
+            The value is not known. This value should not be used
+            in normal situations. All reasonable attempts should be made to determine
+            the appropriate value. Use of this value may result in rejection in some situations.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.EnumValueLithoType">
+            <summary>
+            Lithology qualifier types.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueLithoType.noun">
+            <summary>
+            Qualifiers which are isolated or spot occurrences suggesting 
+            that these components are `included' in a lithology and does not imply a 
+            lithology type (for example, a single occurrence of a fossil).
+            A qualifier which is specified as a point value (top=bottom) should be interpreted 
+            as representing the noun form.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueLithoType.adjective">
+            <summary>
+            Qualifiers which are components or attributes of the lithology 
+            occurring/prevailing over a depth range, or over the whole lithology; an adjective 
+            should be used as a further definition of an existing lithology type (for example, 
+            types of cementation or other diagenetic effects would be expressed using adjectives).
+            A qualifier which is specified over a depth range should be interpreted as representing
+            the adjective form.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueLithoType.both">
+            <summary>
+            A qualifier which can have both adjective and noun forms.
+            If the qualifier is specified either over a depth range then it should be interpreted
+            as representing its adjective form. If the qualifier is specified at a point then it
+            should be interpreted as its noun form.
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.EnumValue.EnumValueLithoType.unknown">
+            <summary>
+            The value is not known. This value should not be used
+            in normal situations. All reasonable attempts should be made to determine
+            the appropriate value. Use of this value may result in rejection in some situations.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.EnumValueNameAttribute">
+            <summary>
+            EnumValueNameAttribute class
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.EnumValue.EnumValueNameAttribute.Name">
+            <summary>
+            Name of EnumValueNameAttribute
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValueNameAttribute.#ctor(System.String)">
+            <summary>
+            Constructs a new instance of a EnumValueNameAttribute
+            </summary>
+            <param name="name">Name of EnumValueNameAttribute</param>
+        </member>
+        <member name="T:Energistics.DataAccess.EnumValue.EnumValuesXMLToClass">
+            <summary>
+            Converts enumValues XML file to a Class
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnumValue.EnumValuesXMLToClass.Convert(System.String,System.String,System.Collections.Generic.List{System.String},System.Boolean,System.String)">
+            <summary>
+            Converts enumValues XML file to a Class. To be used via EnumValuesExtensionGenerator.exe
+            </summary>
+            <param name="filename">Name of the XML file</param>
+            <param name="nameSpace">Namespace to use</param>
+            <param name="enumClassNames">enumClassNames</param>
+            <param name="extensionClass">extensionClass</param>
+            <param name="setName">setName</param>
+            <returns></returns>
+        </member>
+        <member name="T:Energistics.DataAccess.IUniqueId">
+            <summary>
+            Represents a Uid Object
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IUniqueId.Uid">
+            <summary>
+            Gets or sets the unique object identifier.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IDataObject">
+            <summary>
+            Represents a Energistics data object.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IDataObject.Name">
+            <summary>
+            Gets or sets the data object name.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IWellObject">
+            <summary>
+            Represents a Energistics data object.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IWellObject.UidWell">
+            <summary>
+            Gets or sets the parent Well object identifier.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IWellObject.NameWell">
+            <summary>
+            Gets or sets the parent Well object name.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IWellboreObject">
+            <summary>
+            Represents a Energistics data object.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IWellboreObject.UidWellbore">
+            <summary>
+            Gets or sets the parent Wellbore object identifier.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IWellboreObject.NameWellbore">
+            <summary>
+            Gets or sets the parent Wellbore object name.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IActiveDataObject">
+            <summary>
+            Represents an active and/or growing Energistics data object.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IActiveDataObject.IsActive">
+            <summary>
+            Gets or sets whether the data object is active or growing.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IEnergisticsCollection">
+            <summary>
+            Represents a Energistics objects that is a collection
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IEnergisticsCollection.Items">
+            <summary>
+            List of the collection of items
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.IH5Document">
+            <summary>
+            Interface representing a document with a HDF5 file association
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.IH5Document.H5Filename">
+            <summary>
+            Name of the HDF5 file associated with this document
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.EnergisticsConverter">
+            <summary>
+            Class that handles conversion between Energistics object and XML
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.ObjectToXml(System.Object)">
+            <summary>
+            Convert an Energistics object to XML
+            </summary>
+            <param name="obj">The object to convert</param>
+            <returns>The XML representation of the object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.ObjectToXml``1(System.Object)">
+            <summary>
+            Convert an Energistics object to XML
+            </summary>
+            <typeparam name="T">The type of the object</typeparam>
+            <param name="obj">The object to convert</param>
+            <returns>The XML representation of the object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.ObjectToXml``1(System.Object,System.Text.Encoding)">
+            <summary>
+            Convert an Energistics object to XML
+            </summary>
+            <typeparam name="T">The type of the object</typeparam>
+            <param name="obj">The object to convert</param>
+            <param name="encoding">The encoding of the XML</param>
+            <returns>The XML representation of the object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.ObjectToXml(System.Object,System.Text.Encoding)">
+            <summary>
+            Convert an Energistics object to XML
+            </summary>
+            <param name="obj">The object to convert</param>
+            <param name="encoding">The encoding of the XML</param>
+            <returns>The XML representation of the object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.XmlToObject``1(System.String)">
+            <summary>
+            Converts XML to an Energistics object
+            </summary>
+            <param name="xml">The XML to convert</param>
+            <typeparam name="T">The type of the object</typeparam>
+            <returns>The Energistics object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.XmlToObject``1(System.String,System.Text.Encoding)">
+            <summary>
+            Converts XML to an Energistics object
+            </summary>
+            <typeparam name="T">The type of the object</typeparam>
+            <param name="xml">The XML to convert</param>
+            <param name="encoding">The encoding of the XML</param>
+            <returns>The Energistics object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.XmlToObject(System.Type,System.String,System.Text.Encoding)">
+            <summary>
+            Converts XML to an Energistics object
+            </summary>
+            <param name="type">The type of the object</param>
+            <param name="xml">The XML to convert</param>
+            <param name="encoding">The encoding of the XML</param>
+            <returns>The Energistics object</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.EnergisticsConverter.UpgradeVersion``2(``0)">
+            <summary>
+            Upgrades Energistics object from one version to another
+            </summary>
+            <typeparam name="T">Type of original object</typeparam>
+            <typeparam name="TU">Type of new object</typeparam>
+            <param name="oldObject">Original object</param>
+            <returns>New object</returns>
+        </member>
+        <member name="T:Energistics.DataAccess.Reflection.EnergisticsDataObjectAttribute">
+            <summary>
+            Attribute specifying the standards family and data schema version of an Energistics data object.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.Reflection.EnergisticsDataObjectAttribute.#ctor(Energistics.DataAccess.Reflection.StandardFamily,System.String)">
+            <summary>
+            Create a new EnergisticsDataObject attribute with the specified standard and data schema version.
+            </summary>
+            <param name="standardFamily">The standard family the attributed object is defined in</param>
+            <param name="dataSchemaVersion">The data schema version of the attributed object</param>
+        </member>
+        <member name="P:Energistics.DataAccess.Reflection.EnergisticsDataObjectAttribute.StandardFamily">
+            <summary>
+            The standard family the attributed object is defined in
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.Reflection.EnergisticsDataObjectAttribute.DataSchemaVersion">
+            <summary>
+            The data schema version of the attributed object
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute">
+            <summary>
+            Attribute specifying the Energistics data type for elements and attributes
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute.#ctor(System.String)">
+            <summary>
+            Create a new <see cref="T:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute"/> attribute with the specified element or attribute name.
+            </summary>
+            <param name="name">The attribute or element name</param>
+        </member>
+        <member name="M:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute.#ctor">
+            <summary>
+            Create a new <see cref="T:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute"/> attribute.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute.Name">
+            <summary>
+            The attribute or element name.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.Reflection.EnergisticsDataTypeAttribute.DataType">
+            <summary>
+            The XML schema class of the attribute or element.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.Reflection.SerializationUtil">
+            <summary>
+            Provides helper methods for data object serialization.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.Reflection.SerializationUtil.GetXmlElementList(System.Runtime.Serialization.SerializationInfo)">
+            <summary>
+            Gets the <see cref="T:System.Xml.XmlElement"/> list from the serialization info.
+            </summary>
+            <param name="info">The serialization info.</param>
+            <returns>A collection of <see cref="T:System.Xml.XmlElement"/>.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Reflection.SerializationUtil.SetXmlElementList(System.Runtime.Serialization.SerializationInfo,System.Collections.Generic.List{System.Xml.XmlElement})">
+            <summary>
+            Sets the <see cref="T:System.Xml.XmlElement"/> list in the serialization info.
+            </summary>
+            <param name="info">The serialization info.</param>
+            <param name="list">The xml element list.</param>
+        </member>
+        <member name="T:Energistics.DataAccess.Reflection.StandardFamily">
+            <summary>
+            Enumeration of Energistics Standards families
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.Reflection.StandardFamily.WITSML">
+            <summary>
+            WITSML
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.Reflection.StandardFamily.PRODML">
+            <summary>
+            PRODML
+            </summary>
+        </member>
+        <member name="F:Energistics.DataAccess.Reflection.StandardFamily.RESQML">
+            <summary>
+            RESQML
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.Timestamp">
+            <summary>
+            Represents a point in time relative to Coordinated Universal Time (UTC), which
+            can also be serialized and deserialized to and from XML.
+            </summary>
+            <seealso cref="T:System.Xml.Serialization.IXmlSerializable" />
+        </member>
+        <member name="P:Energistics.DataAccess.Timestamp.ParsingStyle">
+            <summary>
+            <see cref="T:System.Globalization.DateTimeStyles"/> to use when parsing timestamps.  In accordance with
+            ISO 8601, the default value is <see cref="F:System.Globalization.DateTimeStyles.AssumeLocal"/>, which
+            means that timestamps with no time zone specified will be assumed to be in local time.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.#ctor(System.DateTimeOffset)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Energistics.DataAccess.Timestamp"/> struct.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Implicit(System.DateTimeOffset)~Energistics.DataAccess.Timestamp">
+            <summary>
+            Performs an implicit conversion from <see cref="T:System.DateTimeOffset"/> to <see cref="T:Energistics.DataAccess.Timestamp"/>.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Implicit(Energistics.DataAccess.Timestamp)~System.DateTimeOffset">
+            <summary>
+            Performs an implicit conversion from <see cref="T:Energistics.DataAccess.Timestamp"/> to <see cref="T:System.DateTimeOffset"/>.
+            </summary>
+            <param name="instance">The instance.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Equality(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Inequality(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThan(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &lt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThan(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &gt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThanOrEqual(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &lt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThanOrEqual(Energistics.DataAccess.Timestamp,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &gt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Equality(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Inequality(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThan(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator &lt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThan(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator &gt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThanOrEqual(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator &lt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThanOrEqual(Energistics.DataAccess.Timestamp,System.DateTimeOffset)">
+            <summary>
+            Implements the operator &gt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Equality(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator ==.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_Inequality(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator !=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThan(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &lt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThan(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &gt;.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_LessThanOrEqual(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &lt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.op_GreaterThanOrEqual(System.DateTimeOffset,Energistics.DataAccess.Timestamp)">
+            <summary>
+            Implements the operator &gt;=.
+            </summary>
+            <param name="a">Timestamp a.</param>
+            <param name="b">Timestamp b.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="other">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.GetSchema">
+            <summary>
+            This method is reserved and should not be used. When implementing the IXmlSerializable interface, you should return 
+            null (Nothing in Visual Basic) from this method, and instead, if specifying a custom schema is required, apply the 
+            <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute" /> to the class.
+            </summary>
+            <returns>
+            An <see cref="T:System.Xml.Schema.XmlSchema" /> that describes the XML representation of the object that is produced 
+            by the <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)" /> method and consumed 
+            by the <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)" /> method.
+            </returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Generates an object from its XML representation.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader" /> stream from which the object is deserialized.</param>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.ToString(System.String)">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:Energistics.DataAccess.Timestamp.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Converts an object into its XML representation.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlWriter" /> stream to which the object is serialized.</param>
+        </member>
+        <member name="T:Energistics.DataAccess.Validation.ComponentElementAttribute">
+            <summary>
+            Custom validation attribute that specifies how a non-primitive property is validated.
+            </summary>
+            <seealso cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" />
+        </member>
+        <member name="M:Energistics.DataAccess.Validation.ComponentElementAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            Returns true if the object value is valid.
+            </summary>
+            <param name="value">The value to validate.</param>
+            <param name="validationContext">The context information about the validation operation.</param>
+            <returns>
+            An instance of the <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" /> class.
+            </returns>
+        </member>
+        <member name="T:Energistics.DataAccess.Validation.WitsmlValidationResult">
+            <summary>
+            Custom ValidationResult class to capture additional information, e.g. error code
+            </summary>
+            <seealso cref="T:System.ComponentModel.DataAnnotations.ValidationResult" />
+        </member>
+        <member name="M:Energistics.DataAccess.Validation.WitsmlValidationResult.#ctor(System.Int16,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Energistics.DataAccess.Validation.WitsmlValidationResult"/> class.
+            </summary>
+            <param name="errorCode">The error code.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="memberNames">The member names.</param>
+        </member>
+        <member name="P:Energistics.DataAccess.Validation.WitsmlValidationResult.ErrorCode">
+            <summary>
+            Gets the error code.
+            </summary>
+            <value>
+            The error code.
+            </value>
+        </member>
+        <member name="T:Energistics.DataAccess.Validation.DataObjectValidator">
+            <summary>
+            Defines a helper method that can be used to validate objects using data annotation attributes.
+            </summary>
+        </member>
+        <member name="M:Energistics.DataAccess.Validation.DataObjectValidator.TryValidate(System.Object,System.Collections.Generic.IList{System.ComponentModel.DataAnnotations.ValidationResult}@)">
+            <summary>
+            Determines whether the specified object is valid.
+            </summary>
+            <param name="instance">The object instance.</param>
+            <param name="results">The validation results.</param>
+            <returns>true if the object is valid; otherwise, false</returns>
+        </member>
+        <member name="T:Energistics.DataAccess.Validation.RecurringElementAttribute">
+            <summary>
+            Custom validation attribute that specifies how a collection property is validated.
+            </summary>
+            <seealso cref="T:System.ComponentModel.DataAnnotations.ValidationAttribute" />
+        </member>
+        <member name="M:Energistics.DataAccess.Validation.RecurringElementAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            Returns true if the collection object value is valid.
+            </summary>
+            <param name="value">The value to validate.</param>
+            <param name="validationContext">The context information about the validation operation.</param>
+            <returns>
+            An instance of the <see cref="T:System.ComponentModel.DataAnnotations.ValidationResult" /> class.
+            </returns>
+        </member>
+        <member name="T:Energistics.DataAccess.ICommonDataObject">
+            <summary>
+            Defines properties common to all data objects.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonDataObject.CommonData">
+            <summary>
+            Gets the common data object.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonDataObject.CustomData">
+            <summary>
+            Gets the custom data object.
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.ICommonData">
+            <summary>
+            Defines audit properties common to all data objects.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonData.DateTimeCreation">
+            <summary>
+            When the data was created at the persistent data store. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonData.DateTimeLastChange">
+            <summary>
+            Last change of any element of the data at the persistent data store. This is an API server parameter releted to the "Special Handling of Change Information" within a server. See the relevant API specification for the behavior related to this element.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonData.SourceName">
+            <summary>
+            An identifier to indicate the data originator. This identifies the server that originally created the object and thus most of the uids in the object (but not necessarily the uids of the parents). This is typically a url. 
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICommonData.Comments">
+            <summary>
+            Comments and remarks. 
+            </summary>
+        </member>
+        <member name="T:Energistics.DataAccess.ICustomData">
+            <summary>
+            Defines an extensible property common to all data objects.
+            </summary>
+        </member>
+        <member name="P:Energistics.DataAccess.ICustomData.Any">
+            <summary>
+            Any property
+            </summary>
+        </member>
+    </members>
+</doc>

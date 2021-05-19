@@ -1,0 +1,52 @@
+2021-05-16 22:08:20,180 [53] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -409; Message: El campo Name es obligatorio.
+2021-05-16 22:08:40,238 [63] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:10:27,495 [65] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:11:54,185 [54] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:18:40,383 [54] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:25:11,965 [72] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:28:56,590 [54] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-16 22:35:38,127 [100] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-17 19:46:14,139 [19] ERROR PDS.WITSMLstudio.Framework.Web.Services.ServiceErrorBehavior ProvideFault - Unhandled exception
+System.ArgumentException: DeviceId must be specified in connection string
+   en Microsoft.Azure.Devices.Client.IotHubConnectionStringBuilder.Validate()
+   en Microsoft.Azure.Devices.Client.IotHubConnectionStringBuilder.Parse(String iotHubConnectionString)
+   en Microsoft.Azure.Devices.Client.IotHubConnectionStringBuilder.CreateWithIAuthenticationOverride(String iotHubConnectionString, IAuthenticationMethod authenticationMethod)
+   en Microsoft.Azure.Devices.Client.ClientFactory.CreateFromConnectionString(String connectionString, IAuthenticationMethod authenticationMethod, ITransportSettings[] transportSettings, IDeviceClientPipelineBuilder pipelineBuilder, ClientOptions options)
+   en Microsoft.Azure.Devices.Client.ClientFactory.CreateFromConnectionString(String connectionString, TransportType transportType, ClientOptions options)
+   en Microsoft.Azure.Devices.Client.DeviceClient.<>c__DisplayClass10_0.<CreateFromConnectionString>b__0()
+   en Microsoft.Azure.Devices.Client.DeviceClient.Create(Func`1 internalClientCreator)
+   en Microsoft.Azure.Devices.Client.DeviceClient.CreateFromConnectionString(String connectionString, TransportType transportType, ClientOptions options)
+   en PDS.WITSMLstudio.Store.WitsmlStore.WMLS_AddToStore(WMLS_AddToStoreRequest request) en C:\Users\rarteaga\Source\Repos\witsml\src\Store.Core\WitsmlStore.cs:línea 219
+   en SyncInvokeWMLS_AddToStore(Object , Object[] , Object[] )
+   en System.ServiceModel.Dispatcher.SyncMethodInvoker.Invoke(Object instance, Object[] inputs, Object[]& outputs)
+   en System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   en System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+2021-05-19 12:14:27,421 [14] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 12:14:35,793 [14] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 12:14:38,252 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 12:14:46,029 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 12:25:20,233 [11] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -409; Message: El campo NameWellbore es obligatorio.; El campo IndexType es obligatorio.; El campo IndexCurve es obligatorio.
+2021-05-19 12:25:28,066 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -409; Message: El campo IndexType es obligatorio.; El campo IndexCurve es obligatorio.
+2021-05-19 12:26:04,834 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -409; Message: The input template must conform to the appropriate derived schema.
+2021-05-19 12:30:41,054 [9] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 12:31:02,166 [9] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:11,011 [65] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:16,485 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:23,601 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:29,009 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:34,924 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:37,471 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:43,036 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:44,119 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:50,959 [65] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 14:16:52,144 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 15:01:21,695 [14] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store
+2021-05-19 15:28:02,371 [15] ERROR PDS.WITSMLstudio.Store.WitsmlStore WMLS_AddToStore - WMLS_AddToStoreResponse: Result: -405; Message: For WMLS_AddToStore, a data-object with the same type and unique identifier(s) must NOT already exist in the persistent store

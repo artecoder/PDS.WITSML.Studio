@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\enterprise\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Namespaces>
+  <Namespace Name="PDS.WITSMLstudio.Store.Data">
+   <Messages>
+    <Message Id="PDS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'PDS' in namespace name 'PDS.WITSMLstudio.Store.Data' by changing it to 'Pds'.</Issue>
+    </Message>
+    <Message Id="WITSM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'WITSM' in namespace name 'PDS.WITSMLstudio.Store.Data' by changing it to 'Witsm'.</Issue>
+    </Message>
+    <Message Id="Lstudio" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Lstudio' in namespace name 'PDS.WITSMLstudio.Store.Data'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="PDS.WITSMLstudio.Store.Security">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'PDS.WITSMLstudio.Store.Security' with another namespace.</Issue>
+    </Message>
+    <Message Id="PDS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'PDS' in namespace name 'PDS.WITSMLstudio.Store.Security' by changing it to 'Pds'.</Issue>
+    </Message>
+    <Message Id="WITSM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">Correct the casing of 'WITSM' in namespace name 'PDS.WITSMLstudio.Store.Security' by changing it to 'Witsm'.</Issue>
+    </Message>
+    <Message Id="Lstudio" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Lstudio' in namespace name 'PDS.WITSMLstudio.Store.Security'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\bin\Release\PDS.WITSMLstudio.Store.MongoDb.Common.dll">
+   <Modules>
+    <Module Name="pds.witsmlstudio.store.mongodb.common.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'PDS.WITSMLstudio.Store.MongoDb.Common.dll' with a strong name key.</Issue>
+      </Message>
+      <Message Id="PDS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'PDS' in assembly name 'PDS.WITSMLstudio.Store.MongoDb.Common.dll' by changing it to 'Pds'.</Issue>
+      </Message>
+      <Message Id="WITSM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">Correct the casing of 'WITSM' in assembly name 'PDS.WITSMLstudio.Store.MongoDb.Common.dll' by changing it to 'Witsm'.</Issue>
+      </Message>
+      <Message Id="Lstudio" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Lstudio' in assembly name 'PDS.WITSMLstudio.Store.MongoDb.Common.dll'.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'PDS.WITSMLstudio.Store.MongoDb.Common.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="PDS.WITSMLstudio.Store.Data">
+       <Types>
+        <Type Name="DatabaseProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'DatabaseProvider' because it creates members of the following IDisposable types: 'ReaderWriterLockSlim'. If 'DatabaseProvider' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ExtensibleEnumSerializer`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Deserialize(MongoDB.Bson.Serialization.BsonDeserializationContext,MongoDB.Bson.Serialization.BsonDeserializationArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Data" File="ExtensibleEnumSerializer.cs" Line="63">In externally visible method 'ExtensibleEnumSerializer&lt;TEnum&gt;.Deserialize(BsonDeserializationContext, BsonDeserializationArgs)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IDatabaseProvider" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDatabase()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning">Change 'IDatabaseProvider.GetDatabase()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UidGenerator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="Uid" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Uid' in type name 'UidGenerator'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Data" File="UidGenerator.cs" Line="30">Initialize all static fields in 'UidGenerator' when those fields are declared and remove the explicit static constructor.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsEmpty(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Data" File="UidGenerator.cs" Line="68">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'UidGenerator.IsEmpty(object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="XmlElementSerializer" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Deserialize(MongoDB.Bson.Serialization.BsonDeserializationContext,MongoDB.Bson.Serialization.BsonDeserializationArgs)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Data" File="XmlElementSerializer.cs" Line="68">In externally visible method 'XmlElementSerializer.Deserialize(BsonDeserializationContext, BsonDeserializationArgs)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Serialize(MongoDB.Bson.Serialization.BsonSerializationContext,MongoDB.Bson.Serialization.BsonSerializationArgs,System.Xml.XmlElement)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Data" File="XmlElementSerializer.cs" Line="43">In externally visible method 'XmlElementSerializer.Serialize(BsonSerializationContext, BsonSerializationArgs, XmlElement)', validate parameter 'context' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="PDS.WITSMLstudio.Store.Security">
+       <Types>
+        <Type Name="DbUser" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#IsOnLine" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="OnLine" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="DbUser.cs" Line="139">The compound word 'OnLine' in member name 'DbUser.IsOnLine' exists as a discrete term. If your usage is intended to be single word, case it as 'Online' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LastLockedOutDate" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="OutDate" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="DbUser.cs" Line="155">The compound word 'OutDate' in member name 'DbUser.LastLockedOutDate' exists as a discrete term. If your usage is intended to be single word, case it as 'Outdate' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LastLoginDate" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Login" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="DbUser.cs" Line="115">Replace the term 'Login' in member name 'DbUser.LastLoginDate' with the preferred alternate 'LogOn'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Username" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Username" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeCompoundWord" Certainty="80" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="DbUser.cs" Line="43">The discrete term 'Username' in member name 'DbUser.Username' should be expressed as a compound word, 'UserName'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="MongoDbMembershipProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChangePassword(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="1#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="174">In member 'MongoDbMembershipProvider.ChangePassword(string, string, string)', change parameter name 'oldPwd' to 'oldPassword' in order to match the identifier as it has been declared in 'MembershipProvider.ChangePassword(string, string, string)'.</Issue>
+            </Message>
+            <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="174">In member 'MongoDbMembershipProvider.ChangePassword(string, string, string)', change parameter name 'newPwd' to 'newPassword' in order to match the identifier as it has been declared in 'MembershipProvider.ChangePassword(string, string, string)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="784">In method 'MongoDbMembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="785">In method 'MongoDbMembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="781">In member 'MongoDbMembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', change parameter name 'newPwdQuestion' to 'newPasswordQuestion' in order to match the identifier as it has been declared in 'MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)'.</Issue>
+            </Message>
+            <Message Id="3#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="781">In member 'MongoDbMembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', change parameter name 'newPwdAnswer' to 'newPasswordAnswer' in order to match the identifier as it has been declared in 'MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="75">Replace the call to 'string.operator !=(string, string)' in 'MongoDbMembershipProvider.CreateUser(string, string, string, string, string, bool, object, out MembershipCreateStatus)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncodePassword(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1308">In method 'MongoDbMembershipProvider.EncodePassword(string)', call System.IDisposable.Dispose on object 'new HMACSHA1()' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1461">In method 'MongoDbMembershipProvider.FindUsersByEmail(string, int, int, out int)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1462">In method 'MongoDbMembershipProvider.FindUsersByEmail(string, int, int, out int)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindUsersByName(System.String,System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1380">In method 'MongoDbMembershipProvider.FindUsersByName(string, int, int, out int)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1381">In method 'MongoDbMembershipProvider.FindUsersByName(string, int, int, out int)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllUsers(System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="pageSize-1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="223">Correct the potential overflow in the operation 'pageSize-1' in 'MongoDbMembershipProvider.GetAllUsers(int, int, out int)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetConfigValue(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="676">The 'this' parameter (or 'Me' in Visual Basic) of 'MongoDbMembershipProvider.GetConfigValue(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNumberOfUsersOnline()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="847">In method 'MongoDbMembershipProvider.GetNumberOfUsersOnline()', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="848">In method 'MongoDbMembershipProvider.GetNumberOfUsersOnline()', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPassword(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="921">In method 'MongoDbMembershipProvider.GetPassword(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="922">In method 'MongoDbMembershipProvider.GetPassword(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUser(System.Object,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1005">In method 'MongoDbMembershipProvider.GetUser(object, bool)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1006">In method 'MongoDbMembershipProvider.GetUser(object, bool)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1029">In method 'MongoDbMembershipProvider.GetUser(object, bool)', call System.IDisposable.Dispose on object 'new OdbcCommand("UPDATE Users SET LastActivityDate = ? WHERE PKID = ?", conn)' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserNameByEmail(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1184">In method 'MongoDbMembershipProvider.GetUserNameByEmail(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1185">In method 'MongoDbMembershipProvider.GetUserNameByEmail(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HexToByte(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1355">The 'this' parameter (or 'Me' in Visual Basic) of 'MongoDbMembershipProvider.HexToByte(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Initialize(System.String,System.Collections.Specialized.NameValueCollection)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToBoolean(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="343">Because the behavior of 'Convert.ToBoolean(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToBoolean(string, IFormatProvider)'. If the result of 'Convert.ToBoolean(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="344">Because the behavior of 'Convert.ToBoolean(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToBoolean(string, IFormatProvider)'. If the result of 'Convert.ToBoolean(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="345">Because the behavior of 'Convert.ToBoolean(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToBoolean(string, IFormatProvider)'. If the result of 'Convert.ToBoolean(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="346">Because the behavior of 'Convert.ToBoolean(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToBoolean(string, IFormatProvider)'. If the result of 'Convert.ToBoolean(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="347">Because the behavior of 'Convert.ToBoolean(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToBoolean(string, IFormatProvider)'. If the result of 'Convert.ToBoolean(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="338">Because the behavior of 'Convert.ToInt32(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToInt32(string, IFormatProvider)'. If the result of 'Convert.ToInt32(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="339">Because the behavior of 'Convert.ToInt32(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToInt32(string, IFormatProvider)'. If the result of 'Convert.ToInt32(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="340">Because the behavior of 'Convert.ToInt32(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToInt32(string, IFormatProvider)'. If the result of 'Convert.ToInt32(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="341">Because the behavior of 'Convert.ToInt32(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToInt32(string, IFormatProvider)'. If the result of 'Convert.ToInt32(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="342">Because the behavior of 'Convert.ToString(string)' could vary based on the current user's locale settings, replace this call in 'MongoDbMembershipProvider.Initialize(string, NameValueCollection)' with a call to 'Convert.ToString(string, IFormatProvider)'. If the result of 'Convert.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UnEncodePassword(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="unencode" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1339">Correct the spelling of the unrecognized token 'unencode' in the literal '"Cannot unencode a hashed password."'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UnlockUser(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1129">In method 'MongoDbMembershipProvider.UnlockUser(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1130">In method 'MongoDbMembershipProvider.UnlockUser(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1129">In member 'MongoDbMembershipProvider.UnlockUser(string)', change parameter name 'username' to 'userName' in order to match the identifier as it has been declared in 'MembershipProvider.UnlockUser(string)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateFailureCount(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="514">In method 'MongoDbMembershipProvider.UpdateFailureCount(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="515">In method 'MongoDbMembershipProvider.UpdateFailureCount(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateUser(System.Web.Security.MembershipUser)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1238">In method 'MongoDbMembershipProvider.UpdateUser(MembershipUser)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1239">In method 'MongoDbMembershipProvider.UpdateUser(MembershipUser)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1244">In externally visible method 'MongoDbMembershipProvider.UpdateUser(MembershipUser)', validate parameter 'user' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteToEventLog(System.Exception,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1538">In method 'MongoDbMembershipProvider.WriteToEventLog(Exception, string)', call System.IDisposable.Dispose on object 'new EventLog()' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message Id="System.Diagnostics.EventLog.WriteEntry(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2021-05-17 02:17:35Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="C:\Users\rarteaga\Source\Repos\witsml\src\Store.MongoDb.Common\Security" File="MongoDbMembershipProvider.cs" Line="1546">Method 'MongoDbMembershipProvider.WriteToEventLog(Exception, string)' passes a literal string as parameter 'message' of a call to 'EventLog.WriteEntry(string)'. Retrieve the following string(s) from a resource table instead: "An exception occurred communicating with the data source.\n\n, Action: , \n\n, E...".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>Avoid namespaces with few types</Name>
+   <Description>A namespace should generally have more than five types.</Description>
+   <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeCompoundWord">The discrete term '{0}' in member name {1} should be expressed as a compound word, '{2}'.</Resolution>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Assembly">Correct the casing of '{0}' in assembly name {1} by changing it to '{2}'.</Resolution>
+   <Resolution Name="Namespace">Correct the casing of '{0}' in namespace name '{1}' by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+   <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+   <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+   <Name>Initialize reference type static fields inline</Name>
+   <Description>Static fields should be initialized when declared. Initializing static data in explicit static constructors results in less performant code.</Description>
+   <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182275.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+   <Name>Operations should not overflow</Name>
+   <Description>Arithmetic operations should not be done without first validating the operands to prevent overflow.</Description>
+   <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182354.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+   <Name>Parameter names should match base declaration</Name>
+   <Description>For usability reasons, parameter names in overridden methods should match those of the base declaration.</Description>
+   <Resolution Name="Default">In member {0}, change parameter name {1} to {2} in order to match the identifier as it has been declared in {3}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182251.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>Test for empty strings using string length</Name>
+   <Description>To test for empty strings, check if String.Length is equal to zero. Constructs such as "".Equals(someString) and String.Empty.Equals(someString) are less efficient than testing the string length. Replace these with checks for someString.Length == 0.</Description>
+   <Resolution Name="IsNullOrEmpty">Replace the call to {0} in {1} with a call to 'String.IsNullOrEmpty'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+   <Name>Use preferred terms</Name>
+   <Description>Use preferred terms over deprecated alternates.</Description>
+   <Resolution Name="Member">Replace the term '{0}' in member name {1} with the preferred alternate '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182258.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>
